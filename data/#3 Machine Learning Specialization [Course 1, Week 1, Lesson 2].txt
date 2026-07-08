@@ -1,0 +1,140 @@
+so what is machine learning in this
+video you learn the definition of what
+it is and also get a sense of when you
+might want to apply it let's take a look
+together
+here's the definition of what is machine
+learning that is attributed to author
+Samuel he defined machine learning as
+the few the study that gives computers
+the ability to learn without being
+exclusively programmed
+Samus claim to fame was that back in the
+1950s he wrote the checkers flame
+program and the amazing thing about this
+program was that author Samuel himself
+wasn't a very good Checkers player
+what he did was he had programmed the
+computer to play Maybe tens of thousands
+of games against herself and by watching
+what source of board positions tended to
+lead to wins and what position is tend
+to delete the losses the checkers flame
+program learns over time what a good or
+bad old positions by trying to get to
+goods and avoid bad positions his
+program learned to get better and better
+at playing checkers
+because the computer had the patience to
+play tens of thousands of games against
+itself it was able to get so much
+Checkers playing experience that
+eventually it became a better Checkers
+player than author Samuel himself
+now throughout these videos besides me
+trying to talk about stuff I'll
+occasionally ask you a question to help
+make sure you understand the content
+here's one about what happens if the
+computer had played far fewer games
+please take a look and pick whichever
+you think is a better answer
+thanks for looking at the quiz
+and so if you have selected this answer
+would have made it worse then you got it
+right
+in general the more opportunities you
+give a learning algorithm to learn the
+better it will perform if you didn't
+select the correct answer the first time
+that's totally okay too the point of
+these quiz questions isn't to see if you
+can get them all correct in the first
+try these questions are here just to
+help you practice the concepts you're
+learning
+author Samuel's definition was
+surrounded in formal one but in the next
+two videos we'll dive deeper together
+into one of the major types of machine
+learning algorithms
+in this class you learn about many
+different learning algorithms the two
+main types of machine learning are
+supervised learning and unsupervised
+learning we'll Define what these terms
+mean more in the next couple videos
+of these two
+supervised learning is the type of
+machine learning that is used most in
+many real world applications and that
+has seen the most rapid advancement and
+innovation
+in this specialization which has three
+causes in total the first and second
+causes will focus on supervised learning
+and the third will focus on unsupervised
+learning recommender systems and
+reinforcement learning
+by far that most used types of learning
+algorithms today are supervised learning
+unsupervised learning and recommend
+those systems
+the other thing we're going to spend a
+lot of time on in this specialization is
+practical advice for applying learning
+algorithms this is something I feel
+pretty strongly about teaching about
+learning algorithms is like giving
+someone a set of tools and equally
+important so even more importance than
+making sure you have great tools is
+making sure you know how to apply them
+because you know what good is it if
+someone were to give you a Steelyard
+hammer or a state of the art hanger and
+say good luck now you have all the tools
+you need to build a three-story house it
+doesn't really work like that and so too
+in machine learning making sure you have
+the tools is really important and so is
+making sure that you know how to apply
+the tools of machine learning
+effectively so that's what you get in
+this class the tools as well as the
+skills with applying them effectively
+I regularly visit with friends and teams
+in some of the top tech companies and
+even today I see experienced machine
+learning teams apply machine learning
+algorithms to some problems and
+sometimes they've been going at it for
+six months without much success and when
+I look at what they're doing I sometimes
+feel like I could have told them six
+months ago that the current approach
+won't work and there's a different way
+of using these tools that will give them
+a much better chance of success
+so in this class one of the relatively
+unique things you learn is you learn a
+lot about the best practices for how to
+actually develop a practical valuable
+machine Learning System
+this way you're less likely to end up in
+one of those teams that end up losing
+six months going in the wrong direction
+in this class you gain a sense of how
+the most skilled machine learning
+engineers build systems and I hope you
+finish this class as one of those very
+rare people in today's world that know
+how to design and build serious machine
+learning systems
+so that's machine learning in the next
+video Let's look more deeply at what is
+supervised learning and also what is
+unsupervised learning in addition you
+learn when you might want to use each of
+them supervised and unsupervised
+learning I'll see you in the next video

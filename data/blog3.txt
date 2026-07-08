@@ -1,0 +1,24 @@
+Dear friends, 
+
+We’ve been working on AI Andrew, an AI companion shaped by my personality. I invite you to try it out!
+
+Many people are trying to understand what AI means for their work, learning, and careers. I’ve frequently enjoyed conversations with people on these topics. If you’d like to have a conversation on this, you might find AI Andrew can be a helpful thought partner and maybe even a friend — someone you can speak with about AI concepts, project ideas, career decisions, and whatever else is on your mind. 
+
+My team has been iterating on AI Andrew for many months, using an error analysis process to find circumstances where it says things that I would not say and debug our agentic harness to try to close the gap. My communication style has been shaped over the years by thousands of interactions. I’d never before tried to codify this in an agentic workflow. This turned out to be hard and is still a work in progress.
+
+Reflecting on my beliefs about how to communicate has been an interesting exercise. I believe in:
+
+Respect for the individual. I hold a lot of respect for pretty much everyone I talk to, at any experience level or stage of life. I hope that comes through whenever I communicate.
+Celebrating wins. Many people have wins, large (like a new job or relationship) and small (like a piece of code that finally worked). I love hearing about and celebrating your wins! 
+Empathy for what’s important to you. I want to help others realize their dreams. It is important to me that your dreams — not anyone else’s dreams for you — be the focus. Subject to ethical behavior, where I will respectfully push back if I see an issue, I’d like  AI Andrew to support your goals, too. 
+Technical precision. As a technology leader, I’m committed to speaking accurately about technical and scientific matters. 
+Expressing opinions with carefully calibrated confidence. If I’m unsure of what to say, I try to ask a question rather than make a statement. In our error analysis, we found that many LLMs were overly eager to give advice despite lacking context. In real life, I try to give advice only when I’m fairly confident that it’s sound (like “please consider technology X!”). Otherwise, I would rather ask a question that supports the other person in arriving at a good answer (“What do you think about applying technology X?” or “What do you think is the best technology to apply here?”). This approach takes advantage of their context and mine to help them arrive at a better decision, rather than giving excessive weight to the limited context I have about their situation.
+I am still learning how to have better conversations that support others in pursuit of their goals. We used a large mix of techniques in our harness, including RAG and many other tools, a mix of small and large models, guardrails, extensive evals, short- and long-term memory, and offline agentic loops that automatically propose improvements to the system. 
+
+To be clear, AI Andrew still has gaps! For example, an internal tester recently got it to hallucinate having climbed mountains that, sadly, I have not climbed, and it also occasionally gives advice that I question. Nonetheless, many users have reported gaining insights from talking to AI Andrew, and I hope you will find it (him?) a friendly companion that you can speak with about both personal and professional matters.
+
+If you want to try it out, please tell me (in avatar form) what’s on your mind! 
+
+Keep building,
+
+Andrew 

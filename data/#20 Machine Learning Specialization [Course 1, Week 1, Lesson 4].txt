@@ -1,0 +1,131 @@
+let's see what happens when you run
+gradient descents for linear regression
+let's go see the algorithm in action
+here's a plot of the model and data on
+the upper left and a console plot of the
+cost function on the upper right
+and at the bottom is the surface plot of
+the same cost function
+often W and B will both be initialized
+to zero but for this demonstration let's
+initialize W to be equal to negative 0.1
+and B to be 900 so this corresponds to f
+of x equals negative 0.1 x plus 900.
+now if we take one step using gradient
+descent we end up going from this point
+of the cost function out here to
+this point
+just down and to the right
+and notice that the straight line fit is
+also changed a bit
+let's take another step
+the cost function has now moved to this
+third point and again the function f of
+x has also changed a bit
+as you take more of these steps the cost
+is decreasing at each update so the
+parameters W and B are following this
+trajectory
+and if you look on the left you get this
+corresponding straight line fit that you
+know fits the data better and better
+until we've reached the global minimum
+the global minimum corresponds to this
+straight line fit which is a relatively
+good fit to the data I mean Isn't that
+cool
+and so that's gradient descent and we're
+going to use this to fit a model to the
+housing data and you can now use this
+FFX model to predict the price of your
+client's house or anyone else's house
+for instance if your friend's whole size
+is
+1250 square feet you can now read off
+the value and predict that maybe they
+could get I don't know 250 000 for the
+health
+to be more precise this gradient descent
+process is called batch gradient descent
+the term bash gradient descent refers to
+the fact that on every step of gradient
+descent we're looking at all of the
+training examples instead of just a
+subset of the training data
+so in Computing gradient descent when
+Computing derivatives we're Computing
+the sum from I equals 1 to m
+and dash creating descent is looking at
+the entire batch of training examples at
+each update
+I know that bash gradient descent may
+not be the most intuitive name but this
+is what people in the machine Learning
+Community call it if you've heard of the
+newsletter the badge that's published by
+Deep learning.ai the newsletter the
+batch was also named for this concept in
+machine learning
+and then it turns out that there are
+other versions of creating descent that
+do not look at the entire training set
+but instead looks at smaller subsets of
+the training data at each update step
+but we'll use batch Grid in descent for
+linear regression
+so that's it for linear regression
+congratulations on getting through your
+first machine learning model I hope you
+go and celebrate or I don't know maybe
+take a nap with your hammock
+in the optional lab that follows this
+video you see a review of the gradient
+descent algorithm as well as how to
+implement it in code you also see a plot
+that shows how the cost decreases as you
+continue training more iterations and
+you also see a contour plot seeing how
+the cost gets closer to the global
+minimum as gradient descent finds better
+and better values for the parameters W
+and B
+so remember that to do the optional lab
+you just need to read and run this code
+you will need to write any code yourself
+and I hope you take a few moments to do
+that and also become familiar with the
+gradient descent code because this will
+help you
+to implement this and similar algorithms
+in the future yourself
+thanks for sticking with me through the
+end of this last video for the first
+week and congratulations for making it
+all the way here you're on your way to
+becoming a machine learning person
+in addition to the optional Labs if you
+haven't done so yet I hope you also
+check out the practice quizzes Which are
+a nice way that you can double check
+your own understanding of the concepts
+it's also totally fine if you don't get
+them all right the first time and you
+can also take the quizzes multiple times
+until you get the score that you want
+you now know how to implement linear
+regression with one variable and that
+brings us to the close of this week
+next week we'll learn to make linear
+regression much more powerful instead of
+one feature like size of a house you
+learn how to get it to work with lots of
+features you also learn how to get it to
+fit non-linear curves these improvements
+will make the album much more useful and
+valuable lastly we'll also go over some
+practical tips that will really help for
+getting linear regression to work on
+practical applications
+I'm really happy to have you here with
+me in this class and I look forward to
+seeing you next week

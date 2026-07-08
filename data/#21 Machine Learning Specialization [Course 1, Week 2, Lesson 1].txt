@@ -1,0 +1,215 @@
+welcome back in this week we'll learn to
+make linear regression much faster and
+much more powerful and by the end of
+this week you'll be two-thirds of the
+way to finishing this first course let's
+start by looking at the version of
+leading regression that look at not just
+one feature but a lot of different
+features let's take a look
+in the original version of linear
+regression
+you had a single feature X the size of
+the Hulls and you're able to predict why
+the price of the house
+so the model was
+FWB of x equals WX plus b
+but now what if you did not only have
+the size of the house as a feature with
+which to try to predict the price
+but if you also knew the number of
+bedrooms the number of floors and the
+age of the home in years it seems like
+this would give you a lot more
+information with which to predict the
+price
+to introduce a little bit of new
+notation we're going to use the
+variables X subscript 1 x subscript 2 x
+substitute 3 and X substitute 4 to
+denote the four features and for
+Simplicity let's introduce a little bit
+more notation
+we'll write X subscript J or sometimes
+I'll just say for short x sub J to
+represent the list of features so here J
+will go from 1 through 4 because we have
+four features
+I'm going to use lowercase n to denote
+the total number of features so in this
+example n is equal to 4. as before we'll
+use x superscript i to denote the if
+training example so here x superstrip i
+is actually going to be a list of four
+numbers
+or sometimes we'll call this a vector
+that includes all the features of the
+I've
+training example
+so as a concrete example x super strip
+in parentheses 2 will be a vector of the
+features for the second training example
+so it will equal to this one four one
+six three two and four d and technically
+I'm writing these numbers in a row so
+sometimes this is called a row Vector
+rather than a column Vector but if you
+don't know what the difference is don't
+worry about it
+it's not that important for this purpose
+and to refer it to a specific feature in
+the if training example
+I will write x super strip I subscript J
+so for example x superscript 2 subscript
+3 will be the value of the third figure
+that is the number of flows in the
+second training example and so that's
+going to be equal to 2.
+sometimes in order to emphasize that
+this X2 is not a number but it's
+actually a list of numbers that is a
+vector will draw an arrow on top of that
+just to visually
+show that is a vector
+and over here as well
+but you don't have to draw this arrow in
+your notation
+you can think of the arrow as an
+optional signifier that sometimes used
+just to emphasize that this is a vector
+and not a number
+now that we have multiple features let's
+take a look at what a model would look
+like
+previously this is how we defined the
+model where X was a single feature so a
+single number but now with multiple
+features we're going to Define it
+differently
+instead the model will be
+FWB of x equals W1 X1 plus W2 X2 plus
+w3x3 plus W 4 x 4 plus b concretely for
+the housing price prediction one
+possible model may be that we estimate
+the price of the house as 0.1 times X1
+the size of the hulls plus 4 times X2
+the number of bedrooms plus 10 times X3
+the number of floors minus 2 times X4
+the age of the Thousand Years Plus 80.
+let's think a bit about how you might
+interpret these parameters
+if the model is trying to predict the
+price of the house in thousands of
+dollars you can think of this b equals
+80 as saying that the base price of a
+house starts off at maybe eighty
+thousand dollars assuming has no size no
+bedrooms no floor and no age
+and you can think of this 0.1 as saying
+that maybe for every additional square
+foot the price will increase by 0.1
+thousand dollars or by a hundred dollars
+because we're saying that for each
+square foot the price increases by 0.1
+you know times a thousand dollars which
+is a hundred dollars
+and maybe for each additional bathroom
+the price increases by four thousand
+dollars and for each additional four the
+price may increase by ten thousand
+dollars and for each additional year of
+the houses age the price May decrease by
+two thousand dollars because the
+parameter is negative two
+and in general
+if you have n features then the model
+will look like this
+here again is the definition of the
+model with n features
+what we're going to do next is introduce
+a little bit of notation to rewrite this
+expression in a simpler but equivalent
+way
+let's Define w as a list of numbers that
+list the parameters W1 W2 W3 all the way
+through WN
+in mathematics this is called a vector
+and sometimes to designate that this is
+a vector which just means a list of
+numbers I'm going to draw a little arrow
+on top
+you don't always have to draw this arrow
+and you can do so or not in your own
+notation so you can think of this little
+arrow as just an optional signifier to
+remind us that this is a vector
+if you take in a linear algebra class
+before you might recognize that this is
+a row Vector as opposed to a column
+Vector but if you don't know what those
+terms means you don't need to worry
+about it next same as before B is a
+single number and not a vector and so
+this Vector W together with this number
+B are the parameters of the model
+let me also write X as a list or a
+vector again a row Vector that lists all
+of the features X1 X2 X3 up through x n
+this is again a vector so I'm going to
+add a little arrow up on top
+to signify so
+in the notation up on top we can also
+add little arrows here
+and here
+to signify that that W and that X are
+actually these lists of numbers that
+they're actually these vectors
+so with this notation the model can now
+be Rewritten more succinctly as f of x
+equals the vector w
+Dot and this dot refers to a DOT product
+from linear algebra
+of X the vector plus the number B
+so what is this dot product mean
+well the dot products of two vectors of
+two list of numbers W and X
+is computed by taking the corresponding
+pairs of numbers
+W1 and X1 multiplying that
+W2 X2 multiplying that
+w3x3 multiplying that all the way up to
+wnxn multiplying that and then summing
+up all of these products
+writing that out this means that the dot
+products is equal to
+W1 X1 plus
+w2x2 plus
+w3x3 plus all the way up to WN xn
+and then finally we add back in the B
+on top
+and you notice that this gives us
+exactly the same expression as we had on
+top
+so the dot product notation lets you
+write the model in a more compact form
+with fewer characters
+the name for this type of linear
+regression model with multiple input
+features is multiple linear regression
+this is in contrast to univariate
+regression which had just one feature
+and by the way you might think this
+album is called multivariate regression
+but that term actually refers to
+something else that we won't be using
+here so I'm going to refer to this model
+as multiple linear regression and so
+that's it for linear regression with
+multiple features which is also called
+multiple linear regression in order to
+implement this there's a really neat
+trick called vectorization which will
+make it much simpler to implement this
+and many other learning algorithms let's
+go on to the next video to take a look
+at what is vectorization

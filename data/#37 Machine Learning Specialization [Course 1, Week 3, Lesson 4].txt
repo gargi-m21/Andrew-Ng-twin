@@ -1,0 +1,287 @@
+now you've seen a couple of different
+learning algorithms linear regression
+and logistic regression they work well
+for many tasks but sometimes in an
+application the album could run into a
+problem called overfitting which can
+cause it to perform poorly
+what I'd like to do in this video is to
+show you what is overfitting as well as
+a closely related almost opposite
+problem called underfitting and in the
+next videos after this I'll share with
+you some techniques for accessing
+overfitting in particular there's a
+method called regularization very useful
+technique I use it all the time but
+regularization will help you minimize
+this overfitting problem and get your
+learning algorithms to work much better
+so let's take a look at what is
+overfitting
+to help us understand what is
+overfitting let's take a look at a few
+examples let's go back to our original
+example of predicting housing prices
+with linear regression where you want to
+predict the price as a function of the
+size of a house
+to help us understand what is
+overfitting let's take a look at a
+linear regression example and I'm going
+to go back to our original running
+example of predicting housing prices
+with linear regression
+suppose your data set looks like this
+with the input feature X being the size
+of the holes and the value why they're
+trying to predict the price of the house
+one thing you could do is fit a linear
+function to this data
+and if you do that you get a straight
+line fit to the data that maybe looks
+like this but this isn't a very good
+model
+looking at the data it seems pretty
+clear that as the size of the hulls
+increases the housing prices kind of
+flatten out
+so this algorithm does not fit the
+training data very well the technical
+term for this is the model is
+underfitting the training data
+another term is the average has high
+bias
+you may have read in the news about some
+learning algorithms really unfortunately
+demonstrating bias against certain
+ethnicities or certain genders in
+machine learning the term bias has
+multiple meanings
+checking learning algorithms for bias
+based on characteristics such as gender
+or ethnicity is absolutely critical
+but the term bias has a second technical
+meaning as well which is the one I'm
+using here which is if the algorithm has
+underfit the data meaning that it's just
+not even able to fit the training set
+that well that is a clear pattern in the
+training data that the album is just
+unable to capture
+another way to think of this form of
+bias is is as if the learning algorithm
+has a very strong preconception or we
+say a very strong bias that the housing
+prices are going to be a completely
+linear function of the size
+despite data to the contrary so this
+preconception that the data is linear
+causes it to fit a straight line that
+fits the data poorly leading it to
+undefeated data
+now let's look at a second variation of
+a model
+which is
+if you instead fit a quadratic function
+to the data with two features x and x
+squared then when you fit the parameters
+W1 and W2 you can get a curve that fits
+the data somewhat better maybe it looks
+like this
+also if you were to get a new house
+that's not in this certified training
+examples
+this model would probably do quite well
+on that new house
+so if you're a real estate agent the
+idea that you want your learning
+algorithm to do well even on examples
+that are not on the training set
+that's called generalization
+technically we say that you want your
+learning algorithm to generalize well
+which means to make good predictions
+even on brand new examples that it has
+never seen before
+so this quadratic model seems to fit the
+training set not perfectly but pretty
+well and I think it'll generalize well
+to new examples
+now let's look at the other extreme what
+if you were to fit a fourth order
+polynomial to the data so you have x x
+squared x cubed and x to the fourth all
+as features
+with this fourth order polynomial you
+can actually fill the curve that passes
+through all five of the training
+examples exactly
+and you might get a curve that looks
+like this
+this on one hand seems to do an
+extremely good job fitting the training
+data because it passes through all of
+the training data perfectly
+in fact you'll be able to choose
+parameters that will result in the cost
+function being exactly equal to zero
+because the errors are zero on all five
+Training examples
+but this is a very you know weekly curve
+it's going up and down all over the
+place
+and if you have this whole size right
+here the model will predict that this
+house is cheaper than houses that are
+smaller than it
+so we don't think that this is a
+particularly good model for protecting
+housing prices the technical term is
+that we'll say this model has overfit
+the data or this model has an
+overfitting problem
+because even though if it's a training
+set very well it has fit the data almost
+too well hence it's over fit and it does
+not look like this model will generalize
+to new examples it has never seen before
+another term for this is that the
+algorithm has high variance
+in machine learning many people will use
+the terms overfit and high variants
+almost interchangeably and we use the
+terms on the fit and high bias almost
+interchangeably
+the intuition behind overfitting or high
+variance is that the album is trying
+very very hard to fit every single
+training example and it turns out that
+if your training set were just even a
+little bit different say one house was
+priced just a little bit more a little
+bit less than the function that the
+algorithm fits could end up being
+totally different
+so if two different machine learning
+Engineers were to fit this fourth order
+polynomial model so just slightly
+different data sets they could end up
+with totally different predictions or
+highly variable predictions and that's
+why we say the RM has high variance
+contrasting this rightmost model with
+the one in the middle
+for the same house it seems the middle
+model gives the much more reasonable
+prediction for price
+there isn't really a name for this case
+in the middle but I'm just going to call
+this just right because it is neither
+under fit nor overfit
+so we can see that the goal of machine
+learning is to find a model that
+hopefully is neither under 15 nor
+overfitting in other words hopefully a
+model that has neither High bias nor
+high variance
+when I think about
+underfitting and overfitting high buys
+and high varians I'm sometimes reminded
+of the children's story of Goldilocks
+and the Three Bears in this children's
+tale a girl called Goldilocks visits the
+whole of a bear family
+there's a bow of porridge that's too
+cold to taste and so that's no good
+there's also a bowl of porridge that's
+too hot to eat
+so that's no good either but there's a
+bowl of Parish that is neither too cold
+nor too hot the temperature is in the
+middle which is just right to eat
+so to recap if you have too many
+features like the full water polynomial
+on the right then the model may fit the
+training set well but almost too well or
+overfits and have high varians on the
+flip side if you have too few features
+then in this example like the one on the
+left that underfits and has high bias
+and in this example using quadratic
+features x and x squared that seems to
+be just right
+so far we've looked at underfitting and
+overfitting for linear regression model
+similarly overfitting applies to
+classification as well
+here's a classification example with two
+features X1 and X2 where X1 is maybe the
+tumor size and X2 is the age of nation
+and we're trying to classify if a tumor
+is malignant or benign as denoted by
+these crosses and circles
+one thing you can do is fit a logistic
+regression model just a simple model
+like this where as usual G is the
+sigmoid function and this term here
+inside is z
+so if you do that
+you end up with a straight line as the
+decision boundary this is the line where
+Z is equal to zero that separates the
+positive and negative examples
+this straight line doesn't look terrible
+it looks kind of okay but it doesn't
+look like a very good fit to the data
+either
+so this is an example of underfitting or
+of high bias
+let's look at another example if you
+were to add to your features these
+quadratic terms then Z becomes this new
+term in the middle and the decision
+boundary that is where Z equals zero can
+look more like this more like an ellipse
+or part of an ellipse and this is a
+pretty good fit to the data even though
+it does not perfectly classify every
+single training example in the training
+set
+notice how some of these crosses get
+classified among the circles
+but this model looks pretty good I'm
+gonna call it just right and it looks
+like this will generalize pretty well to
+new patients
+and finally at the Other Extreme if you
+were to fit a very high order polynomial
+with many many features like these
+then the model may try really hard and
+contort or twist itself to find a
+decision boundary that fits your
+training data perfectly
+having all these higher order polynomial
+features allows the algorithm to choose
+this really overly complex decision
+boundary
+if the features are tumor size in age
+and you're trying to classify tumors as
+malignant or benign then this doesn't
+really look like a very good model for
+making predictions
+so once again this is an instance of
+overfitting and high variance because
+this model despite doing very well in
+the training set doesn't look like or
+generalized well to new examples
+so now you've seen how an algorithm can
+underfit or have high bias or overfit
+and have high variance you may want to
+know how you can get a model that is
+just right in the next video we'll look
+at some ways you can adjust the issue of
+overfitting and we'll also touch on some
+ideas relevance for Azure scene
+underfitting let's go on to the next
+video

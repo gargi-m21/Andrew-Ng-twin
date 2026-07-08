@@ -1,0 +1,233 @@
+in this video we'll look at what the
+overall process of supervised learning
+is like
+specifically you see the first model of
+this course a linear regression model
+that just means filling a straight line
+to your data is probably the most widely
+used learning algorithm in the world
+today and as you get familiar with
+linear regression many of the concepts
+you see here will also apply to other
+machine learning models models that you
+see later in this specialization
+let's start with a problem that you can
+address using linear regression say you
+want to predict the price of a house
+based on the size of a house this is the
+example we seen earlier this week
+we're going to use the data set on house
+sizes and prices from Portland a city in
+the United States
+here with a graph where the horizontal
+axis is the size of the house in square
+feet and the vertical axis is the price
+of house in thousands of dollars
+let's go ahead and plot the data points
+for various houses in the data set here
+at each data points each of these little
+crosses is a house with a size and the
+price that most recently was sold for
+now let's say your real estate agent in
+Portland and you're helping a client
+sell her house
+and she's asking you how much do you
+think you're gonna get for this house
+this data set might help you estimate
+the price she could get for it
+you start by measuring the size of the
+house and it turns out that her house is
+1250 square feet how much do you think
+this house could sell for
+one thing you could do is you can build
+a linear regression model from this data
+set your model will fit a straight line
+to the data which might look like this
+and based on this straight line fig to
+the data you can kind of see that if a
+holes is 1250 square feet
+it will intersect the best fit line over
+here
+and if you trace that to the vertical
+axis on the left you can see the price
+is maybe around here say about two
+hundred and twenty thousand dollars so
+this is an example of what's called a
+supervised learning model we call this
+supervised learning because you are
+first training your model by giving a
+data that's the right answers because
+you give the model examples of hoses
+with both the size of the holes as well
+as the price that the model should
+predict for each house
+where here the prices that is the right
+answers are given for every house in the
+data set
+this linear regression model is a
+particular type of supervised learning
+model is called a regression model
+because it predicts numbers as the
+output like prices in dollars any
+supervised learning model that predicts
+a number such as 220 000 or 1.5 or
+negative 33.2 is addressing what's
+called a regression problem
+so linear regression is one example of a
+regression model but there are other
+models for addressing regression
+problems too and we'll see some of those
+later in course two of this
+specialization
+and just remind you in contrast with the
+regression model the other most common
+type of supervised learning model is
+called a classification Model A
+classification model predicts categories
+or discrete categories such as
+predicting if a picture is of a cat meow
+or a dog woof
+or is given the medical record it has to
+predict if a patient has a particular
+disease
+you see more about classification models
+later in this course as well so as a
+reminder about the difference between
+classification and regression in
+classification there are only a small
+number of possible outputs if your model
+is recognizing cats versus dogs that's
+two possible outputs or maybe you're
+trying to recognize any of 10 possible
+medical conditions in a patient
+so there's a discrete finite set of
+possible outputs we call it a
+classification problem whereas in
+regression there are infinitely many
+possible numbers that the model could
+output
+in addition to visualizing this data as
+a plot here on the left
+there's one other way of looking at the
+data that would be useful
+and that's a data table here on the
+right
+the data comprises a set of inputs this
+would be the size of the house which is
+this column here
+it also has outputs you're trying to
+predict the price which is this column
+here
+notice that the horizontal and vertical
+axis correspond to these two columns the
+size
+and the price
+and so if you have say 47 rows in this
+data table then there are 47 of these
+lower crosses on the plot of the left
+each cross corresponding to one row of
+the table
+for example
+the first row of the table is a house
+with size
+2104 square feet so that's
+around here
+and this house so for 400 000 which is
+around here
+so this first row of the table is
+plotted as this data point over here
+now let's look at some notation for
+describing the data this is notation
+that you find useful throughout your
+journey in machine learning
+as you increasingly get familiar with
+machine learning terminology this would
+be the terminology they can use to talk
+about machine learning concepts with
+others as well since a lot of this is
+quite standard across AI
+you'll be seeing this notation multiple
+times into specialization so it's okay
+if you don't remember everything to
+first sign through it will naturally
+become more familiar over time
+the data set that you just saw and that
+is used to train the model is called a
+training set
+note that your client's house is not in
+this data set because it's not yet sold
+so no one knows what this price is
+so to predict the price of your client's
+house you first train your model to
+learn from the training set and that
+model can then predict your clients
+houses price
+in machine learning the standard
+notation to denote the input here is
+lowercase x and we call this the input
+variable it is also called a feature or
+an input feature
+for example for the first house in your
+training set access the size of the
+holes so x equals 2104
+the standard notation to denote the
+output variable which you're trying to
+predict which is also sometimes called
+the target variable is lowercase y
+and so here Y is the price of the house
+and for the first training example this
+is equal to 400 so y equals 400. so the
+data set has one row for each house and
+in this particular training set there
+are 47 rows with each row representing a
+different training example
+we're going to use lowercase M to refer
+to the total number of training examples
+and so here m is equal to 47
+to indicate a single training example
+we're going to use the notation
+parentheses x comma y
+so for the first chain example X comma y
+this pair of numbers is
+2104 comma 400.
+now we have a lot of different training
+examples we have 47 of them in fact so
+to refer to a specific training example
+this will correspond to a specific Row
+in this table on the left I'm going to
+use the notation X superscript in
+parentheses I comma Y superscript in
+parentheses I
+the superscript tells us that this is
+the if training example
+such as
+the first second or third up to the 47th
+training example
+I here refers to a specific Row in the
+table
+so for instance here is the first
+example
+when I equals 1 in the training set
+and so x super strip 1
+is equal to 2104 and why superscript 1
+is equal to 400
+and let's add the superscript 1 here as
+well
+just a note this superscript I in
+parentheses is not exponentiation so
+when I write this
+this is not x squared
+this is not x to the power of 2 it just
+refers to the second training example
+so this I is just an index of the
+training set and refers to row I in the
+table
+in this video you saw what a training
+set is like as well as a standard
+notation for describing this training
+set in the next video let's look at what
+it'll take to take this training set you
+just saw and feed it to learning
+algorithm so that the algorithm can
+learn from this data let's see that in
+the next video

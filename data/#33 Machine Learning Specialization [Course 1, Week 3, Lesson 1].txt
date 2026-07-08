@@ -1,0 +1,218 @@
+in the last video you learned about the
+logistic regression model
+now let's take a look at the decision
+boundary to get a better sense of how
+logistic regression is Computing is
+predictions to recap here's how the
+logistic regression models outputs are
+computed in two steps in the first step
+you compute Z as w dot X plus b
+then you apply the sigmoid function G to
+this value Z and here again is the
+formula for the sigmoid function
+another way to write this is we can say
+f of x is equal to G the sigmoid
+function also called the logistic
+function apply to w dot X plus b where
+this is of course the value of Z
+and if you take the definition of the
+sigmoid function and plug in the
+definition of Z then you find that f of
+x is equal to this formula over here
+1 over 1 plus e to the negative Z where
+Z is W X plus b
+and you may remember we said in the
+previous video that we interpret this as
+the probability that Y is equal to 1
+given X and with parameters W and B and
+so this is going to be a number like
+maybe a 0.7 or 0.3 now what if you want
+the learning algorithm to predict is the
+value of y going to be 0 or 1.
+well one thing you might do is set a
+threshold above which you predict Y is
+one or you set y hat the prediction to
+be equal to one and Below which you
+might say why hat my prediction is going
+to be equal to zero
+so a common choice would be to pick a
+threshold of 0.5 so that if f of x is
+greater than or equal to 0.5 then
+predict Y is 1. and we write that
+prediction as y hat equals one
+or if f of x is less than 0.5 then
+predict Y is 0 or in other words the
+prediction y-hat is equal to zero
+so now let's dive deeper into when the
+model will predict one in other words
+when is f of x greater than or equal to
+0.5
+we'll recall that f of x is just equal
+to G of Z and so f is greater than or
+equal to 0.5 whenever G of Z is greater
+than or equal to 0.5
+but when is G of Z greater than or equal
+to 0.5
+well here's a sigmoid function over here
+and so G of Z is greater than or equal
+to 0.5 whenever Z is greater than or
+equal to zero right that is whenever Z
+is on the right half of this axis
+and finally when a z greater than or
+equal to zero well Z is equal to w dot X
+plus b
+and so Z is greater than or equal to
+zero whenever w dot X plus b is greater
+than or equal to zero
+so to recap what you've seen here is
+that the model predicts one
+whenever w dot X plus b is greater than
+or equal to zero
+and conversely
+when w dot X plus b is less than zero
+the algorithm predicts Y is zero
+so given this let's now visualize how
+the model makes predictions
+I'm going to take an example of a
+classification problem where you have
+two features X1 and X2 instead of just
+one feature
+here's a training set with the little
+red crosses denote the positive examples
+and the little blue circles denote
+negative examples
+so the red crosses corresponds to y
+equals one and the blue circles
+correspond to y equals zero
+so the logistic regression model will
+make predictions using this function
+f of x equals g of Z where Z is now this
+expression over here W1 X1 plus W2 X2
+plus b because we have two features X1
+and X2
+and let's just say for this example
+that the value of the parameters are W1
+equals 1 W 2 equals 1 and b equals
+negative three and let's not take a look
+at how logistic regression makes
+predictions
+in particular let's figure out when w x
+plus b is greater than or equal to zero
+and when w x plus b is less than zero
+to figure that out there's a very
+interesting line to look at which is
+when w x plus b is exactly equal to zero
+it turns out that this line is also
+called the decision boundary because
+that's the line where you're just almost
+neutral about whether Y is 0 or Y is one
+now for the values of the parameters W1
+W2 and B that we had written down above
+this decision boundary is just X1 plus
+X2 minus 3.
+and so when is X1 plus X2 minus 3 equal
+to zero
+well that will correspond to the line X1
+plus X2 equals 3.
+and that is this line shown over here
+and so this line turns out to be the
+decision boundary where if the features
+X are to the right of this line logistic
+regression would predict one and to the
+left of this line logistic regression
+would predict zero
+in other words what we have just
+visualized is the decision boundary for
+logistic regression when the parameters
+W1 W2 and B are 1 1 and negative three
+of course if you had a different choice
+of the parameters the decision boundary
+would be a different line
+now let's look at a more complex example
+where the decision boundary is no longer
+a straight line
+as before crosses denote the class y
+equals one and the little circles denote
+the Clause y equals zero
+earlier last week
+you saw how to use polynomials in linear
+regression and you can do the same in
+logistic regression
+so let's set Z to be W1 X1 squared plus
+W2 X2 squared plus b
+with this choice of features polynomial
+features into a logistic regression so f
+of x which equals g of Z is now G of
+this expression over here
+and let's say that we end up choosing W1
+and W2 to be one
+and B to be negative one
+so Z is equal to 1 times 61 squared plus
+one times X2 squared minus 1. and the
+decision boundary as before will
+correspond to when Z is equal to zero
+and so this expression will be equal to
+zero when X1 squared plus X2 squared is
+equal to 1. and if you plot on the
+diagram on the left the curve
+corresponding to X1 squared plus X2
+squared equals one this turns out to be
+this circle
+when X1 squared plus X2 squared is
+greater than or equal to one that's this
+area outside the circle
+and that's when you predict y to be one
+conversely when X1 squared plus X2
+squared is less than one that's this
+area inside the circle and that's when
+you would predict y to be zero
+so can we come up with even more complex
+decision boundaries than these
+yes you can you can do so by having even
+higher order polynomial terms say Z is
+W1 X1 plus w2x2 plus w3x1 squared plus W
+4 x 1 x 2 plus W5 X2 squared then it's
+possible that you can get even more
+complex decision boundaries the model
+can Define decision boundaries such as
+this example and ellipse that's like
+this or with a different choice of the
+parameters
+you can even get more complex decision
+boundaries which can look like functions
+that maybe looks like that
+so this is an example of an even more
+complex decision boundary than the ones
+we've seen previously and this
+implementation of religious regression
+will predict y equals one inside this
+shape and outside the shape will predict
+y equals zero so with these polynomial
+features you can get very complex
+decision boundaries in other words
+logistic regression you can learn to fit
+pretty complex data
+although if you were to not include any
+of these higher order polynomials so if
+the only features you use are X1 X2 X3
+and so on then the decision boundary for
+electricity regression will always be
+linear will always be a straight line
+in the upcoming optional lab you also
+get to see the code implementation of
+the decision boundary
+in the example in the lab there will be
+two features so you can see the decision
+boundary as a line
+so with these visualization I hope that
+you now have a sense of the range of
+possible models you can get with
+logistic regression
+now that you've seen what f of x can
+potentially compute let's take a look at
+how you can actually train a logistic
+regression model we'll start by looking
+at the cost function for the
+distribution and after that figure out
+how to apply gradient descent to it
+let's go on to the next video

@@ -1,0 +1,140 @@
+so previously you took a look at the
+linear regression model and then the
+cost function and then the gradient
+descents algorithm in this video we're
+going to put it all together and use the
+squared error cost function for the
+linear regression model with gradient
+descent this will allow us to train the
+linear regression model to fit a
+straight line to our trading data let's
+get to it here's the linear regression
+model and to the right is the squared
+error cost function and below is the
+gradient descent algorithm it turns out
+if you calculate these derivatives these
+are the terms you would get
+the derivative with respect to W is this
+1 over M sum from I equals 1 through M
+then the error term that is the
+difference between the predicted and the
+actual values times the input feature x
+i and the derivative with respect to B
+is this formula over here which looks
+the same as the equation above except
+that it doesn't have that x i term at
+the end
+and if you use these formulas to compute
+these two derivatives and Implement
+gradient descent this way it will work
+now you may be wondering where did I get
+these formulas from that derived using
+Calculus if you want to see the full
+derivation I'll quickly run through the
+derivation on the next slide but if you
+don't remember or aren't interested in
+the calculus don't worry about it you
+can skip the materials on the next slide
+entirely and still be able to implement
+gradient descent and finish this class
+and everything will work just fine
+so in this slide which is one of the
+most mathematical slides of the entire
+specialization and again it's completely
+optional will show you how to calculate
+the derivative terms let's start with
+the first term the derivative of the
+cost function J with respect to w
+we'll start by plugging in the
+definition of the cost function J so J
+of WB is this
+so 1 over 2m times this sum of the
+squared error terms
+and now remember also that F of w b of x
+i is equal to this term over here
+which is w x i plus b
+and so what we would like to do is
+compute the derivative also called the
+partial derivative with respect to W of
+this equation right here on the right if
+you've taken a Calculus class before and
+again it's totally fine if you haven't
+you may know that by the rules of
+calculus the derivative is equal to this
+term over here
+which is why the 2 here and the 2 here
+cancel out leaving us with this equation
+that you saw on the previous slide
+so this by the way is why we had to find
+the cost function with the one half
+earlier this week is because it makes
+the partial derivative neater it cancels
+out the two that appears from Computing
+the derivative
+for the other derivative with respect to
+B this is quite similar I can write it
+out like this and once again plug in the
+definition of f of x i giving this
+equation
+and by the rules of calculus this is
+equal to this where there's no x i
+anymore at the end and so the twos
+cancel once more and you end up with
+this expression for the derivative with
+respect to B
+and so now you have these two
+expressions for the derivatives and you
+can plug them into the gradients Descent
+algorithm
+so here's the gradient descent algorithm
+for linear regression you repeatedly
+carry out these updates to wmb until
+convergence remember that this f of x is
+a linear regression model so it's equal
+to W Times X plus b
+this expression here is the derivative
+of the cost function with respect to W
+and this expression is the derivative of
+the cost function with respect to B
+and just as a reminder you want to
+update wnb simultaneously on each step
+now let's get familiar with how gradient
+descent works one issue we saw with
+gradient descent is that it can lead to
+a local minimum instead of a global
+minimum whether Global minimum means the
+point that has the lowest possible value
+for the cost function J all of all
+possible points you may recall this
+surface plot that looks like an outdoor
+park with a few Hills with the cross and
+the burst this is relaxing out the hill
+this function has more than one local
+minimum remember depending on where you
+initialize the parameters W and B you
+can end up at different local Minima you
+can end up here or you can end up here
+but it turns out when you're using a
+squared error cost function with linear
+regression
+the cost function does not and will
+never have multiple local minimum it has
+a single Global minimum because of this
+bow shape
+the technical term for this is that this
+cost function is a convex function
+informally a convex function is a
+bow-shaped function and it cannot have
+any local Minima other than the single
+Global minimum
+so when you implement gradient descent
+on a convex function one nice property
+is that so long as your learning rate is
+chosen appropriately it will always
+converge to the global minimum
+congratulations you now know how to
+implement gradient descent for linear
+regression we have just one last video
+for this week in that video we'll see
+this algorithm in action let's go to
+that last video

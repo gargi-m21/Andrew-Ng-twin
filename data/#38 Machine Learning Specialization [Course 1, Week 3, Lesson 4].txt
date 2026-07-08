@@ -1,0 +1,189 @@
+later in this specialization we'll talk
+about debugging and diagnosing things
+that can go wrong with learning
+algorithms you also learn about specific
+tools to recognize when overfitting and
+underfitting may be occurring but for
+now when you think overfitting has
+occurred let's talk about what you can
+do to address it let's say you fit a
+model and it has high variance is
+overfit here's our overfit house price
+predi ction
+model one way to address this problem is
+to collect more training data so that's
+one option if you're able to get more
+data that is more training examples on
+sizes and prices of houses then with the
+larger trading set the learning
+algorithm will learn to fit a function
+that is less wigly so you can continue
+to fit a high order polinomial or some
+of the function with a lot of features
+and and if you have enough training
+examples it will still do
+okay so to
+summarize the number one tool you can
+use against overfitting is to get more
+training data now getting more data
+isn't always an option maybe only so
+many houses have been sold in this
+location so maybe there just isn't more
+data to be had but when the data is
+available this can work really well a
+second option for adressing overfitting
+is to see if you can use fewer features
+in the previous video our model's
+features included the size X as well as
+the size squar that is X squ and X cub
+and X the four and so on these were a
+lot of polinomial features so in that
+case one way to reduce overfitting is to
+just not use so many of these polinomial
+features but now let's look at a
+different example maybe you have a lot
+of different features of a house with
+which to try to predict its price
+ranging from a size number of bedrooms
+number of floors the age average income
+of the neighborhood and so on and so
+forth to the distance to the nearest
+coffee shop it turns out that if you
+have a lot of features like these but
+don't have enough training data then
+your learning algorithm may also overfit
+to your training set now instead of
+using all 100 features if we were to
+pick just a subset of the most useful
+ones
+maybe size
+bedrooms and the age of the house if you
+think those are the most relevant
+features then using just that smaller
+subset of features you may find that
+your model no longer overfits as badly
+choosing the most appropriate set of
+features to use is sometimes also called
+feature selection one way you could do
+so is to use your intuition to choose
+what you think is the best set of
+features what's most relevant for
+predicting the price now one
+disadvantage of feature selection is
+that by using only a subset of the
+features the algorithm is throwing away
+some of the information that you have
+about the houses for example maybe all
+of these features all 100 of them are
+actually useful for predicting the price
+of a house so maybe you don't want to
+throw away some of the information by
+throwing away some of the
+features later in course two you also
+see some algorithms for automatically
+choosing the most appropriate set of
+features to use for a prediction toss
+now this takes us to the third option
+for reducing overfitting this technique
+which we'll look at in even greater
+depth in the next video is called
+regularization if you look at an overfit
+model here's a model using polinomial
+features XX s x cubed and so on you find
+that the parameters are often relatively
+large now if you were to eliminate some
+of these features say if you were to
+eliminate the feature X4 that
+corresponds to setting this parameter to
+zero so setting a parameter to zero is
+equivalent to eliminating a feature
+which is what we saw on the previous
+slide it turns out that regularization
+is a way to more gently reduce the
+impacts of some of the features without
+doing something as harsh as eliminating
+it outright what regularization does is
+encourage the learning algorithm to
+shrink the values of the parameters
+without necessarily demanding that the
+parameter is set to exactly zero and it
+turns out that even if you fit a higher
+order polinomial like this so long as
+you can get the algorith to use smaller
+parameter values W1 W2 W3 W4 you end up
+with a curve that ends up fitting the
+training data much better
+so what regularization does is it lets
+you keep all of your features but it
+just prevents the features from having a
+overly large effect which is what
+sometimes can cause
+overfitting by the way by convention we
+normally just reduce the size of the WJ
+parameters that is W1 through WN it kind
+of doesn't make a huge difference
+whether you regularize the parameter b
+as well you could do so you want or not
+if you don't I usually don't and it's
+just fine to regularize W1 W2 all the
+way to WN but not really encourage B to
+become smaller in practice it should
+make very little difference whether you
+also regularize b or
+not so to recap these are the three ways
+you saw in this video for addressing
+overfitting one collect more data if you
+can get more data this can really really
+help reduce
+overfitting sometimes that's not
+possible in which case some of their
+options are
+to try selecting and using only a subset
+of the features you learn more about
+feature selection in course
+two three would be to reduce the size of
+the parameters using
+regularization this will be the subject
+of the next video as well just for
+myself I use regularization all the time
+so this is a very useful technique for
+training learning algorithms including
+neuron networks specifically which you
+see later in the specialization as well
+I hope you also check out the optional
+lab on over fitting in the lab you bu
+see different examples of overfitting
+and adjust those examples by clicking on
+options in the plots you also be able to
+add your own data points by clicking on
+the plot and see how that changes the
+curve that that is fit you can also try
+examples for both regression and
+classification and you better change the
+degree of the polom to be x x s x cubed
+and so
+on the lab also lets you play with two
+different options for accessing
+overfitting you can add additional
+training data to reduce overfitting and
+you can also select which features to
+include or to exclude as another way to
+try to reduce over overfitting so please
+take a look at the lab which I hope will
+help you build your intuition about
+overfitting as well as some methods for
+addressing it in this video you also saw
+the idea of regularization at a
+relatively high level I realize that all
+of these details on regularization may
+not fully make sense to you yet but in
+the next video we'll start to formulate
+exactly how to apply regularization and
+exactly what regularization means
+and then we'll start to figure out how
+to make this work with our learning
+algorithms to make linear regression and
+logistic regression and in the future
+other algrims as well avoid overfitting
+let's take a look at that in the next
+video

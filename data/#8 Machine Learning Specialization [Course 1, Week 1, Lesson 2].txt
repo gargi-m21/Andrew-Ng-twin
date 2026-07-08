@@ -1,0 +1,114 @@
+so far into videos you've seen
+supervised learning and unsupervised
+learning and also examples of both
+for you to more deeply understand these
+Concepts I'd like to invite you in this
+class to see run and maybe later write
+code yourself to implement these
+Concepts the most widely used tool by
+Machine learning and data science
+practitioners today is The jupyter
+Notebook this is the default environment
+that a lot of us use to code up an
+experiment and try things out and so in
+this class right here in your web
+browser you'll be able to use a jupyter
+notebook environment to test out some of
+these ideas for yourself as well
+this is not some made up simplified you
+know environment this is the exact same
+environments the exact same tool the
+Jupiter notebook that developers are
+using in many large companies right now
+one type of lab that you see throughout
+this class are optional Labs which are
+once you can open and run one line at a
+time with usually not needing to write
+any code yourself
+so optional labs are designed to be very
+easy and I can guarantee you will get
+four miles for every single one of them
+because there are no amounts all you
+need to do is open it up and just run
+the code we've provided
+and by reading through and running the
+code in the optional Labs you see how
+machine learning code runs
+and you should be able to complete them
+you know relatively quickly just by
+running it one line at a time from top
+to bottom optional labs are completely
+optional so you don't have to do them at
+all if you don't want to but I hope you
+will take a look because running through
+them will give you a deeper feel give
+you a little bit more experience with
+what's machine learning algorithms what
+machine learning code actually looks
+like
+starting next week there'll also be some
+practice Labs which will give you an
+opportunity to write some of that codes
+yourself
+but we'll get to that next week so don't
+worry about it for now and I hope you
+just go through the next optional lab
+and get through the rest of the content
+for this week
+so let's take a look at an example of a
+notebook
+here's what you see when you go to the
+first optional lab feel free to scroll
+up and down and browse and mouse over
+the different menus and take a look at
+the different options here
+you might notice that there are two
+types of these blocks also called cells
+in The Notebook and there are two types
+of cells
+one is what's called a markdown cell
+which means basically a bunch of text
+so here you can actually edit the text
+if you don't like the text that we wrote
+but this is text that describes the code
+then there's a second type of block or
+cell which looks like this which is a
+code cell
+so here we've already provided the code
+and if you want to run this code cell
+hitting shift enter will run the code in
+this code cell
+oh and by the way if you click on the
+markdown cell so it's showing all this
+formatting go ahead and hit shift enter
+on your keyboard as well and that will
+also convert it back to this nicely
+formatted text
+this optional lab shows some common
+python codes so you can go ahead and run
+this afterwards in your own Jupiter
+notebook
+when you jump into this notebook
+yourself what I'd like you to do is
+select the cells and hit shift enter
+well read through the codes see if it
+makes sense you know try to make a
+prediction about what you think this
+code will do and then hit shift enter
+and then see what the code actually does
+and if you feel like it feel free to go
+in and edit the code you know change the
+code and then run it and see what
+happens
+and if you haven't played in the Jupiter
+notebook environment before I hope you
+become more familiar with python in a
+jupyter notebook I spend a lot of hours
+playing around in jupyter notebooks and
+so I hope you have fun with them too and
+after that I look forward to seeing you
+in the next video where we'll take the
+supervised learning problem and start to
+flesh out our first supervised learning
+algorithm I hope that will be fun too
+and look forward to seeing you there

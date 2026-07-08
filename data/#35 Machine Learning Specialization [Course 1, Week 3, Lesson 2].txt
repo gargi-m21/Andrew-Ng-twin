@@ -1,0 +1,121 @@
+in the last video you saw the loss
+function and the cost function for
+logistic regression in this video you
+see a slightly simpler way to write out
+the loss and cost functions so that the
+implementation can be a bit simpler when
+we get to gradient descent for fitting
+the parameters of a logistic regression
+model let's take a look as a reminder
+here's the last function that we had
+defined in the previous video for
+logistic regression
+now because we're still working on the
+binary classification problem Y is
+either 0 or 1.
+because Y is either 0 or 1 and cannot
+take on any value other than zero or one
+we'll be able to come up with a simpler
+way to write this loss function
+you can write the loss function as
+follows
+given a prediction f of x and the target
+label y the loss equals negative y Times
+log of f minus
+1 minus y Times log of 1 minus f
+and it turns out this equation which we
+just wrote in one line is completely
+equivalent to this more complex formula
+up here
+let's see why this is the case
+now remember y can only take on the
+values of either one or zero
+in the first case let's say y equals 1.
+this first y over here is one and this
+one minus y is 1 minus 1 which is
+therefore equal to zero and so the loss
+becomes negative 1 times log of f of x
+minus zero times a bunch of stuff that
+becomes zero and goes away
+and so when Y is equal to one the loss
+is indeed the first term on top negative
+log of f of x
+let's look at the second case when Y is
+equal to zero
+in this case this y here is equal to
+zero so this first term goes away
+and the second term is 1 minus zero
+times that logarithmic term
+so the loss becomes this negative one
+Times log of 1 minus f of x
+and that's just equal to
+this second term up here
+and so in the case of y equals zero we
+also get back the original loss function
+as defined above
+so what you see is that whether Y is one
+or zero the single expression here is
+equivalent to the more complex
+expression up here
+which is why this gives us a simpler way
+to write the loss with just one equation
+without separating out these two cases
+like we did on top
+using this simplified loss function
+let's go back and write out the cost
+function for logistic regression
+so here again is the simplified loss
+function
+and recall that the COS J is just the
+average loss average across the entire
+training set of M examples
+so is 1 over n times the sum of the loss
+from I equals 1 to m
+now if you plug in the definition for
+the simplified loss from above then it
+looks like this 1 over M times the sum
+of this term above
+and if you bring the negative signs and
+move them outside then you end up with
+this expression over here and this is
+the cost function
+the cost function that pretty much
+everyone uses to train logistic
+regression
+now you might be wondering why do we
+choose this particular function when
+there could be tons of other cost
+functions we could have chosen
+although we won't have time to go into
+great detail on this in this class I'd
+just like to mention that this
+particular cost function is derived from
+statistics using a statistical principle
+called maximum likelihood estimation
+which is an idea from statistics on how
+to efficiently find parameters for
+different models
+and this cost function has the nice
+property that it is convex
+but don't worry about learning the
+details of Maximum likelihood there's
+just a deeper rationale and
+justification behind this particular
+cost function
+the upcoming optional lab will show you
+how the logistic cost function is
+implemented in code I recommend taking a
+look at it because you implement this
+later in the practice Lab at the end of
+the week
+this upcoming optional lab also shows
+you how two different choices of the
+parameters will lead to different cost
+calculations so you can see in the plot
+that the better fitting blue decision
+boundary has a lower cost relative to
+the magenta decision boundary
+so with the simplified cost function
+we're now ready to jump into applying
+gradient descent to logistic regression
+let's go see that in the next video

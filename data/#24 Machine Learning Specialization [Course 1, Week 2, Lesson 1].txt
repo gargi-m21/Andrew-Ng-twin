@@ -1,0 +1,173 @@
+so you've learned about gradient
+descents about multiple linear
+regression and also vectorization let's
+put it all together to implement
+gradient descent for multiple linear
+regression with factorization this would
+be cool
+let's quickly review what multiple
+linear regression look like using our
+previous notation let's see how you can
+write it more succinctly using Vector
+notation we have parenthesis W1 to WN as
+well as B but instead of thinking of W1
+to WN as separate numbers that is
+separate parameters lessons that collect
+all of the W's into a vector W so that
+now W is a vector of length n
+so we're just going to think of the
+parameters of this model as a vector W
+as well as B where B is still a number
+same as before
+as before we had defined multiple linear
+regression like this now using Vector
+notation we can write the model as F sub
+w b of x equals the vector w dot product
+with the vector X plus b
+and remember that this dot here means
+dot product our cost function can be
+defined as J of W1 through WN comma B
+but instead of just thinking of J as a
+function of these n different parameters
+W J as well as B we're going to write J
+as a function of parameter Vector W and
+the number B so this W1 through WN is
+replaced by this Vector W and J now
+takes its input a vector W and the
+number B and returns a number
+here's why gradient descents looks like
+we're going to repeatedly update each
+parameter WJ to be WJ minus Alpha times
+the derivative of the COS J where J has
+parameters W1 through WN and B and once
+again we just write this as J of vector
+W and number B
+let's see what this will look like when
+you implement gradient descent and in
+particular let's take a look at the
+derivative term
+we'll see that gradient descents becomes
+just a little bit different with
+multiple features compared to just one
+feature
+here's what we had when we had gradient
+descents with one feature we had an
+update rule for w and a separate update
+rule for B so hopefully these look
+familiar to you
+and this term here is the derivative of
+the cost function J with respect to the
+parameter W and similarly we have an
+update rule for parameter B with univari
+regression we had only one feature
+we call that feature x i without any
+subscript
+now here's the new notation for when we
+have n features where n is two or more
+we get this update rule for gradient
+descent update W1 to be W1 minus Alpha
+times this expression here
+and this formula is actually the
+derivative of the COS J with respect to
+W1
+the formula for the derivative of J with
+respect to W1 on the right looks very
+similar to the case of one feature on
+the left
+the error term still takes a prediction
+f of x minus the target's y one
+difference is that W and X are now
+vectors and just as W on the left has
+now become W1 here on the right
+x i here on the left is now instead x i
+subscript 1 here on the right
+and this is just for J equals 1.
+for multiple linear regression we have J
+ranging from 1 to n and so will update
+the parameters W1 W2 all the way
+up to w n
+and then as before we'll update B
+and if you implement this you get
+gradient descent for multiple regression
+so that's it for gradient descent for
+multiple regression
+before moving on from this video I want
+to make a quick aside or a quick side
+note on an alternative way for finding W
+and B for linear regression and this
+method is called the normal equation
+whereas it turns out gradient descents
+is a great method for minimizing the
+cost function J to find W and B
+there is one other algorithm that works
+only for linear regression and pretty
+much none of the other algorithms you
+see in the specialization for solving
+for w and B and this other method does
+not need an iterative gradient descent
+algorithm
+called the normal equation method it
+turns out to be possible to use an
+advanced learning algebra library to
+just solve for wmb all in one go without
+iterations
+some disadvantages of the normal
+equation method are
+first unlike gradient descents this does
+not generalize to other learning
+algorithms such as the logistic
+regression algorithm that you learn
+about next week or the neural networks
+or other algorithms you see later in
+this specialization
+the normal equation method is also quite
+slow if the number of features n is
+large
+almost no machine learning practitioners
+should implement the normal equation
+method themselves but if you're using a
+mature machine learning library and call
+linear regression there is a chance that
+on the back end it will be using this to
+solve for wmb
+so if you're ever in a job interview and
+hear the term normal equation that's
+what this refers to
+don't worry about the details of how the
+normal equation works just be aware that
+some machine learning libraries may use
+this complicated method in the back end
+to solve for wnb but for most learning
+algorithms including how you implement
+linear regression yourself creating the
+sense often a better way to get the job
+done
+in the optional lab that follows this
+video you see how to define a multiple
+regression model in code
+and also how they calculate the
+prediction f of x
+you also see how to calculate the cost
+and implements gradient descent from
+multiple linear regression model this
+will be using Python's numpy Library so
+if any of the code looks very new that's
+okay but you should feel free also to
+take a look at the previous optional lab
+that introduces numpy and vectorization
+for a refresher of numpy functions and
+how to implement those in codes
+so that's it you now know multiple
+linear regression this is probably the
+single most widely used learning
+algorithm in the world today but there's
+more with just a few tricks such as
+picking and scaling features
+appropriately and also choosing the
+learning rate Alpha properly you
+probably make this work much better
+so just a few more videos to go for this
+week let's go on to the next video to
+see those little tricks that will help
+you make multiple linear regression work
+much better

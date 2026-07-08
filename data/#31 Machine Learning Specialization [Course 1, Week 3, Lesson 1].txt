@@ -1,0 +1,230 @@
+welcome to the third week of this course
+by the end of this week you have
+completed the first course of this
+specialization so let's jump in last
+week you learned about linear regression
+which predicts a number this week you
+learn about classification where you
+output variable y can take on only one
+of a small handful of possible values
+instead of any number in an infinite
+range of numbers
+it turns out that linear regression is
+not a good algorithm for classification
+problems let's take a look at why and
+this will lead us into a different
+algorithm called logistic regression
+which is one of the most popular and
+most widely used learning algorithms
+today
+here are some examples of classification
+problems recall the example of trying to
+figure out whether an email is spam
+so the answer you want to Output is
+going to be either a no or a yes
+another example would be figuring out if
+an online financial transaction is
+fraudulent
+fighting online financial fraud is
+something I once worked on and it was
+strangely exhilarating because I knew
+there were forces out there trying to
+steal money and my team's job was to
+stop them
+so the problem is given a financial
+transaction can your learning algorithm
+figure out is this transaction
+fraudulent such as what's this credit
+card stolen
+another example we've touched on before
+was trying to classify a tumor as
+malignant versus not
+in each of these problems the variable
+that you want to predict can only be one
+of two possible values no or yes this
+type of classification problem where
+there are only two possible outputs is
+called binary classification where the
+word binary refers to there being only
+two possible Clauses or two possible
+categories
+in these problems I will use the terms
+class and category relatively
+interchangeably they mean basically the
+same thing
+by convention we can refer to these two
+Clauses or categories in a few common
+ways
+we often designate Clauses as no or yes
+or sometimes equivalently false or true
+or very commonly using the numbers 0 or
+1
+following the common convention in
+computer science with zero denoting
+false and one denoting true
+I'm usually going to use the numbers 0
+and 1 to represent the answer y because
+that will fit in most easily with the
+types of learning algorithms we want to
+implement
+but when we talk about it we'll often
+say no or yes or false or true as well
+one of the terminology is commonly used
+is to call the false or zero Clause the
+negative clause and the true or the one
+Clause the positive class
+for example for spam classification an
+email that is not spam may be referred
+to as a negative example because the
+output to the question of is a spam the
+output is no or zero
+in contrast an email that is Spam might
+be referred to as a positive training
+example because the answer to Is it spam
+is yes or true or one
+to be clear negative and positive do not
+necessarily mean bad versus good or evil
+versus good it's just that negative and
+positive examples are used to convey the
+concepts of absence or zero or false
+versus a presence or true or one of
+something you might be looking for such
+as the absence or presence of the
+staminess or the spam property of an
+email or the absence of presence of
+fraudulent activity or absence of
+presence of malignancy in a tumor
+between non-spam and spam emails which
+one you call false or zero and which one
+you call true or one is a little bit
+arbitrary often either Choice could work
+so a different engineer might actually
+swap it around and have the positive
+class be the presence of a good email or
+deposit cost be the presence of a real
+financial transaction or a healthy
+patient
+so
+how do you build a classification
+algorithm
+here's the example of a training set for
+classifying if a tumor is malignant
+because one positive Clause yes clause
+or benign Clause 0 or negative Clause I
+plotted both the tumor sides on the
+horizontal axis as well as the label y
+on the vertical axis
+by the way in week one when we first
+talked about classification this is how
+we previously visualized it on the
+number line except that now we're
+calling the Clauses 0 and 1 and plotting
+them on the vertical axis
+now one thing you could try on this
+training set is to apply the album you
+already know linear regression and try
+to fit a straight line to the data
+if you do that maybe the straight line
+Looks like this right and that's your f
+of x
+linear regression predicts not just the
+values 0 and 1 but all numbers between 0
+and 1 or even less than zero or greater
+than one
+but here we want to predict categories
+one thing you could try is to pick a
+threshold of say 0.5 so that if the
+model outputs a value below 0.5 then you
+predict y equals 0 or not malignant and
+if the model outputs a number equal to
+or greater than 0.5 then predict y
+equals 1 or malignant
+notice that this threshold value of 0.5
+intersects the best fit straight line at
+this point
+so if you draw this vertical line here
+everything to the left ends up with a
+prediction of y equals zero and
+everything on the right ends up with a
+prediction of y equals one
+now for this particular data set it
+looks like linear regression could do
+something reasonable
+but now let's see what happens if your
+data set has one more training example
+this one way over here on the right
+this also extends the horizontal axis
+notice that this training example
+shouldn't really change how you classify
+the data points
+this vertical dividing line that we drew
+just now still makes sense as the cutoff
+where 2 is smaller than this should be
+classified as zero and tumor is greater
+than this should be classified as one
+but once you've added this extra
+training example on the right the best
+fit line for linear regression will
+shift over like this
+and if you continue using the threshold
+of 0.5 you now notice that everything to
+the left of this point is predicted as
+zero non-malignant and everything to the
+right of this point is predicted to be
+one or malignant
+this isn't what we want because adding
+that example way to the right shouldn't
+change any of our conclusions about how
+to classify malignant versus benign
+tumors
+but if you try to do this with linear
+regression adding this one example which
+feels like it shouldn't be changing
+anything it ends up with us learning a
+much worse function for this
+classification problem
+clearly when the tumor is large we want
+the algorithm to classify it as
+malignant
+so what we just saw was linear
+regression causes the best bit line when
+we added one more example to the right
+to shift over and does the dividing line
+also called the decision boundary to
+shift over to the right
+you learn more about the decision
+boundary in the next video
+you also learn about an algorithm called
+logistic regression where the output
+value of the outcome will always be
+between 0 and 1 and the algorithm will
+avoid these problems that we're seeing
+on the slide by the way one thing
+confusing about the name logistic
+regression is that even though it has
+the word regression in it is actually
+used for classification
+don't be confused by the name which was
+given for historical reasons this
+actually used to solve binary
+classification problems with output
+label Y is either 0 or 1.
+in the upcoming optional lab you also
+get to take a look at what happens when
+you try to use linear regression for
+classification
+sometimes you get lucky and it may work
+but often it will not work well which is
+why I don't use linear regression myself
+for classification
+in the optional lab you see an
+interactive plot that attempts to
+classify between two categories and
+hopefully notice how this often doesn't
+work very well which is okay because
+that motivates the need for a different
+model to do classification tasks
+so please check out this optional lab
+and after that we're going to the next
+video to look at logistic regression for
+classification

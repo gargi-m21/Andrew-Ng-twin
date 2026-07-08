@@ -1,0 +1,135 @@
+in this video you see how to implement
+regularized logistic regression just as
+the gradient update for logistic
+regression has seemed surprisingly
+similar to the gradient update for
+linear regression you find that the
+gradient is an update for regularized
+logistic regression will also look
+similar to the update for regularized
+linear regression let's take a look
+here's the idea we saw earlier that
+logistic regression can be prone to
+overfitting if you fit it with very high
+order polynomial features like this
+here Z is a high order polynomial that
+gets passed into the sigmoid function
+like so to compute f
+and in particular you can end up with a
+decision boundary that is overly complex
+and over this training set
+more generally when you train logistic
+regression with a lot of features where
+the polynomial features or some other
+features there can be a higher risk of
+overfitting
+this was the cost function for logistic
+regression if you want to modify it to
+use regularization all you need to do is
+add to it the following term
+let's add Lambda the regularization
+parameter over 2m times the sum from J
+equals 1 through n where n is the number
+of features as usual of w j squared
+so when you minimize this cost function
+as a function of w and B that has the
+effects of penalizing parameters W1 W2
+through WN and preventing them from
+being too large
+and if you do this then even though
+you're fitting a high order polynomial
+with a lot of parameters you still get
+the decision boundary that looks like
+this something that looks more
+reasonable for separating positive and
+negative examples while also
+generalizing hopefully to new examples
+not in the training set
+so when using regularization even when
+you have a lot of features how can you
+actually implement this how can you
+actually minimize this cost function J
+of WB that includes the regularization
+theorem
+well let's use gradient descent as
+before
+so here's the cost function that you
+want to minimize and to implement
+gradient descent as before we'll carry
+out the following simultaneous updates
+over WJ and B
+these are the usual update rules for
+gradient descent and just like
+regularized linear regression when you
+compute what are these derivative terms
+the only thing that changes now is that
+the derivative with respect to WJ gets
+this additional term
+Lambda over M times WJ added here at the
+end
+and again it looks a lot like the update
+for regularized linear regression in
+fact it's the exact same equation except
+for the fact that the definition of f is
+now no longer than linear function it is
+the logistic function applied to Z
+and similar to linear regression we will
+regularize only the parameters WJ but
+not the parameter B which is why there's
+no change the update you would make for
+B
+in the final optional lab of this week
+you revisit overfitting and in the
+interactive plot in the optional app you
+can now choose to regularize your models
+both regression and classification by
+enabling regularization during gradient
+descent by selecting a value for Lambda
+please take a look at the code for
+implementing regularized logistic
+regression in particular because you
+implement this in a practice lab
+yourself at the end of this week
+so now you know how to implement
+regularized logistic regression
+when I walk around Silicon Valley there
+are many Engineers using machine
+learning to create a ton of value
+sometimes making a lot of money for the
+companies and I know you've only been
+studying this stuff for a few weeks but
+if you understand and can apply linear
+regression and logistic regression
+that's actually all you need to create
+some very valuable applications
+while the specific learning algorithms
+you use are important knowing things
+like when and how to reduce overfitting
+turns out to be one of the very valuable
+skills in the real world as well so I
+want to say congratulations on how far
+you've come and I want to say great job
+for getting through all the way to the
+end of this video
+I hope you also work through the
+practice labs and quizzes
+having said that there's still many more
+exciting things to learn
+in the second course of this
+specialization you learn about neural
+networks also called Deep learning
+algorithms new networks are responsible
+for many of the latest breakthroughs in
+AI today from practical speech
+recognition to computers accurately
+recognizing objects and images to
+self-driving cars the way a neural
+network gets built actually uses a lot
+of what you've already learned like cost
+functions and gradient descent and
+sigmoid functions so again
+congratulations on reaching the end of
+this third and final week of course one
+I hope you have funded the labs and I
+will see you in next week's material on
+neural networks

@@ -1,0 +1,221 @@
+let's take a look at how you can
+actually implement the gradient descent
+algorithm let me write down the gradient
+descent algorithm here it is on each
+step
+W the parameter is updated to the old
+value of w minus Alpha times this term D
+over DW of the cost function J of WB
+so what this expression is saying is
+update your parameter W by taking the
+current value of w and adjusting it a
+small amount which is this expression on
+the right minus Alpha times this term
+over here okay
+so if you feel like there's a lot going
+on in this equation it's okay don't
+worry about it we'll unpack it together
+first this equal notation here notice I
+said we're assigning w a value using
+this equal sign so in this context this
+equal sign is the assignment operator
+specifically in this context if you
+write code that says a equals c it means
+take the value of c and store it in your
+computer in the variable a or if you
+write a equals a plus one it means set
+the value of a to be equal to a plus one
+or increment the value of a by one
+so the assignments operator in coding is
+different than truth assertions in
+mathematics where if I write a equals c
+I'm asserting that is I am claiming that
+the values of A and C are equal to each
+other and hopefully I will never write a
+truth assertion a equals a plus one
+because you know that just can't
+possibly be true
+so in Python and in other programming
+languages truth assertions are sometimes
+written as equals equals so you may see
+code that says a equals equals c if
+you're testing whether a is equal to C
+but in that notation as we
+conventionally use it like in these
+videos the equal sign can be used for
+either assignments or for truth
+assertion and so I'll try to make sure
+it's clear when I write an equal sign
+whether we're assigning a value to a
+variable or whether we're asserting the
+truth of the equality of two values
+now let's dive more deeply into what the
+symbols in this equation means
+the symbol here is the Greek alphabet
+Alpha and in this equation Alpha is also
+called The Learning rate
+the learning rate is usually a small
+positive number between 0 and 1 and it
+might be say 0.01
+what Alpha does is it basically controls
+how big of a step you take downhill
+so if Alpha is very large then that
+corresponds to a very aggressive
+gradient descent procedure where you're
+trying to take huge steps downhill
+and if Alpha is very small then you'd be
+taking small baby steps downhill
+we'll come back later to delve more
+deeply into how to choose a good
+learning raise Alpha and finally this
+term here
+that's the derivative term of the cost
+function J
+let's not worry about the details of
+this derivative right now but later on
+you get to see more about the derivative
+term but for now you can think of this
+derivative term that I drew a magenta
+box around as telling you in which
+direction you want to take your baby
+step and in combination with the
+learning rate Alpha it also determines
+the size of the steps you want to take
+downhill
+now I do want to mention that
+derivatives come from calculus and even
+if you aren't familiar with Calculus
+don't worry about it even without
+knowing any calculus you'll be able to
+figure out all you need to know about
+this diversity term in this video and
+the next
+one more thing remember your model has
+two parameters not just W but also B
+so you also have an assignment operation
+to update the parameter B then looks
+very similar B is assigned the O value
+of B minus the learning rate Alpha times
+this slightly different derivative term
+D over DB of J of w b
+so remember in the graph of the surface
+plot where you're taking baby steps
+until you get to the bottom of the
+valley
+well for the gradient descent algorithm
+you're going to repeat these two update
+steps until the album converges and by
+convergence I mean that you reach the
+point at a local minimum where the
+parameters W and B no longer change much
+with each additional step that you take
+now there's one more subtle detail about
+how to correctly Implement gradient
+descent you're going to update two
+parameters W and B right
+so this update takes place for both
+parameters wmb
+one important detail is that for
+gradient descent you want to
+simultaneously update wmb meaning you
+want to update both parameters at the
+same time what I mean by that is that in
+this expression you're going to update W
+from the old W to a new w
+and you're also updating B from his old
+value to a new value of B
+and the way to implement this is to
+compute the right side
+Computing this thing for w and B and
+simultaneously at the same time
+update W and B to the new values
+so let's take a look at what this means
+here's the correct way to implement
+gradient descent which does a
+simultaneous update this sets a variable
+temp W equal to that expression which is
+W minus that term here
+let's also set another variable temp B
+to that which is B minus that term so
+you compute both right hand signs both
+updates and slow them into variables
+temp W and temp B
+then you copy the value of temp W into W
+and you also copy the value of temp B
+into B
+now one thing you may notice is that
+this value of w is from before W gets
+updated
+here notice that the pre-update W is
+what goes into the derivative term over
+here okay
+in contrast here's an incorrect
+implementation of grading the sense that
+does not do a simultaneous update
+in this incorrect implementation we
+compute temp W same as before so far
+that's okay
+and now here's where things start to
+differ
+we then update W with the value in temp
+W before calculating the new value for
+the other param to be
+next we calculate temp b as B minus that
+term here and finally we update B with
+the value in temp B
+the difference between the right hand
+side and the left hand side
+implementations is that if you look over
+here this W has already been updated to
+this new value and is this updated W
+that actually goes into the cost
+function J of WB
+it means that this term here on the
+right is not the same as this term over
+here that you see on the left
+and that also means this temp B term on
+the right is not quite the same as the
+temp B term on the left and thus this
+updated value of a B on the right is not
+the same as this updated value for
+variable B on the left
+the way that gradient descents is
+implemented in code it actually turns
+out to be more natural to implement it
+the correct way with simultaneous
+updates
+when you hear someone talk about great
+in descends they always mean the
+gradient descent where you perform a
+simultaneous update of the parameters
+if however you were to implement
+non-simultaneous updates it turns out it
+will probably work more or less anyway
+but doing it this way isn't really the
+correct way to implement it is actually
+some other algorithm with different
+properties so I would advise you to just
+stick to the correct simultaneous update
+and not use this incorrect version on
+the right
+so that's gradient descent in the next
+video we'll go into details of the
+derivative term which you saw in this
+video but that we didn't really talk
+about in detail
+derivatives are part of calculus and
+again if you're not familiar with
+Calculus don't worry about it you will
+need to know calculus at all in order to
+complete this course or the
+specialization and you have all the
+information you need in order to
+implement gradient descent
+coming up in the next video we'll go
+over derivatives together and you come
+away with the intuition and knowledge
+you need to be able to implement and
+apply gradient descent yourself I think
+that'll be an exciting thing for you to
+know how to implement so let's go on to
+the next video to see how to do that

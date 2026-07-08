@@ -1,0 +1,207 @@
+the choice of the learning rate Alpha
+will have a huge impact on the
+efficiency of your implementation of
+gradient descent and if Alpha the
+learning rate is chosen poorly gradient
+descent may not even work at all in this
+video Let's Take a deeper look at the
+learning rate this will also help you
+choose better learn arrays for your
+implementations of gradient descent
+so here again is the grade into sense
+rule W is updated to be W minus the
+learning array Alpha times the
+derivative term to learn more about what
+the learning rate Alpha is doing let's
+see what could happen if the learning
+rate Alpha is either too small or if it
+is too large
+for the case where the learning rate is
+too small here's a graph where the
+horizontal axis is w and the vertical
+axis is the cost J and here's a graph of
+the function J of w
+let's start gradient descent at this
+point here
+if the learning rate is too small then
+what happens is that you multiply your
+derivative term by some really really
+really small number
+so you're going to be multiplying by
+number Alpha that's really small like
+0.0001
+and so you end up taking a very small
+baby step like that
+then from this point you're going to
+take another you know tiny tiny little
+baby step
+but because the learning rate is so
+small the second step is also just
+minuscule the outcome of this process is
+that you do end up decreasing the cost J
+but incredibly slowly
+so here's another step and another step
+another tiny step until you finally
+approach the minimum but as you may
+notice you're going to need a lot of
+steps to get to the minimum so to
+summarize if the learning rate is too
+small then gradient descent will work
+but it will be slow it will take a very
+long time because it's going to take
+these tiny tiny baby steps and it's
+going to need a lot of steps before it
+gets anywhere close to the minimum
+now let's look at a different case
+what happens if the learning rate is too
+large here's another graph of the cost
+function and let's say we start gradient
+descent with W at this value here so
+it's actually already pretty close to
+the minimum
+so the derivative points to the right
+but if the learning rate is too large
+then you update W via a giant step to be
+all the way over here
+and that's this point here on the
+function J
+so you move from this point on the left
+all the way to this point on the right
+and now the cost has actually gotten
+worse it has increased because it has
+started out at this value here and after
+one step it actually increased to this
+value here
+now the derivative at this new Point
+says to decrease w
+but when the learning rate is too big
+then you may take a huge step going from
+here all the way out here
+so now you've got to this point here
+and again if the learning rate is too
+big then you take another huge step at
+the next iteration and way overshoot the
+minimum again
+so now you're at this point on the right
+and one more time you do another update
+and end up all the way here and so
+you're now at this point here
+so as you may notice you're actually
+getting further and further away from
+the minimum
+so if the learning rate is too large
+then creating descent May overshoot and
+may never reach the minimum
+and another way to say that is that
+gradient descent may fail to converge
+and may even diverge
+so here's another question you may be
+wondering
+what if your parameter W is already at
+this point here so that your cost J is
+already at a local minimum
+what do you think one step of creating
+descents will do if you've already
+reached a minimum
+so this is a tricky one
+when I was first learning this stuff it
+actually took me a long time to figure
+it out but let's work through this
+together
+let's suppose you have some cost
+function J
+and the one you see here isn't a square
+error cost function and this cost
+function has two local Minima
+corresponding to the two values that you
+see here
+now let's suppose that after some number
+of steps of gradient descent your
+parameter W is over here say equal to
+five
+and so this is the current value of w
+this means that you're at this point on
+the cost function J and that happens to
+be a local minimum
+turns out if you draw a tangent to the
+function at this point the slope of this
+line is zero and thus the derivative
+term here is equal to zero for the
+current value of w
+and so your gradient descent update
+becomes W is updated to W minus the
+learning rate times 0 but here that's
+because the derivative term is equal to
+zero and this is the same as saying
+let's set W to be equal to w
+so this means that if you're already at
+a local minimum grading the sense leaves
+W unchanged because it just updates the
+new value of w to be the exact same old
+value of w
+so concretely let's say if the current
+value of w is 5 and Alpha is 0.1
+after one iteration you update to W as W
+minus Alpha times 0 and it is still
+equal to 5.
+so if your parameters have already
+brought you to a local minimum then
+further gradient descent steps to
+absolutely nothing it doesn't change the
+parameters which is what you want
+because it keeps the solution at that
+local minimum this also explains why
+creating the sense can reach a local
+minimum even with a fixed learning rate
+Alpha here's what I mean
+to illustrate this let's look at another
+example
+here's the cost function J of w that we
+want to minimize let's initialize
+gradient descent up here at this point
+if we take one update step maybe it'll
+take us to that point
+and because this derivative is pretty
+large gradient descent takes a
+relatively big step right
+now we're at this second point
+where we take another step and you may
+notice that the slope is not as steep as
+it was at the first point so the
+derivative isn't as large and so the
+next update step will not be as large as
+that first step
+now where this third Point here and the
+derivative is smaller than it was at the
+previous step and will take an even
+smaller step
+as we approach the minimum the
+derivative gets closer and closer to
+zero so as we run gradient descent
+eventually we're taking very small steps
+until you finally reach a local minimum
+so just a recap
+as we get nearer a local minimum
+gradient descents will automatically
+take smaller steps and that's because as
+we approach the local minimum the
+derivative automatically gets smaller
+and that means the update steps also
+automatically get smaller even if the
+learning rate Alpha is kept at some
+fixed value
+so that's the gradient descent algorithm
+you can use it to try to minimize any
+cost function J not just the mean
+squared error cost function that we're
+using for linear regression
+in the next video we're going to take
+the function J and set that back to be
+exactly the linear regression model's
+cost function the mean squared error
+cost function that we come up with
+earlier
+and putting together gradient descents
+with this cost function that will give
+you your first learning algorithm the
+linear regression algorithm

@@ -1,0 +1,182 @@
+in order to implement linear regression
+the first key step is for us to define
+something called a cost function this is
+something we built in this video and the
+cost function will tell us how well the
+model is doing so that we can try to get
+it to do better let's look at what this
+means recall that you have a training
+set that contains input features X and
+output targets y
+and the model you're going to use to fit
+this training set is this linear
+function
+FWB of x equals W Times X plus b
+to introduce a little bit more
+terminology the W and B are called the
+parameters of the model
+in machine learning parameters of a
+model all the variables you can adjust
+during training in order to improve the
+model
+sometimes you also hear the parameters W
+and B referred to as coefficients or as
+weights
+now let's take a look at what these
+parameters W and B do
+depending on the values you've chosen
+for wnb you get a different function f
+of x which generates a different line on
+the graph and remember that we can write
+f of x as a shorthand for FWB of x
+we're going to take a look at some plots
+of f of x on the chart maybe you're
+already familiar with drawing lines on
+charts but even if this is a review for
+you I hope this will help you build
+intuition on how W and B the parameters
+determine f
+when w is equal to 0 and B is equal to
+1.5 then F looks like this horizontal
+line
+in this case the function f of x is 0
+times X Plus 1.5 so f is always a
+constant value it always predicts 1.5
+for the estimated value of y so y hat is
+always equal to B and here B is also
+called the y-intercept because that's
+where it crosses the vertical axis or
+the y-axis on this graph
+as a second example
+if W is 0.5 and B is equal to 0 then f
+of x is 0.5 times x
+when x is 0 the prediction is also zero
+and when X is 2 then the prediction is
+0.5 times 2 which is 1.
+so you get a line that looks like this
+and notice that the slope is 0.5
+divided by one
+so the value of w gives you the slope of
+the line which is 0.5
+and finally if W equals 0.5 and b equals
+1
+then f of x is 0.5 times X plus one
+and when x is 0 then f of x equals B
+which is one so the line intersects the
+vertical axis at B the y-intercept
+also when X is 2 then f of x is 2. so
+the line Looks like this again the slope
+is 0.5 divided by 1 so the value of w
+gives you the slope which is 0.5
+recall that you have a training set like
+the one shown here with linear
+regression what you want to do is to
+choose values for the parameters W and B
+so that the straight line you get from
+the function f somehow fits the data
+well like maybe this line shown here
+and when I say that the line fits the
+data visually you can think of this to
+mean that the line defined by f is
+roughly passing through or somewhat
+close to the trading examples as
+compared to other possible lines the not
+as close in these points
+and just to remind you of some notation
+a training example like this point here
+is defined by x superstrip i y super
+strip I where Y is the target
+for a given input x i
+the function f also makes a predicted
+value for y and the value that it
+predicts for y is y hat I shown here for
+our choice of a model f of x i is W
+Times x i plus b stated differently the
+prediction y hat I is f of WB of x i
+where for the model we're using
+f of x i is equal to w x i plus b
+so now the question is
+how do you find values for w and B so
+that the prediction y hat I is close to
+the true Target y i for many or maybe
+all training examples x i y i
+to answer that question let's first take
+a look at how to measure how well a line
+fits the training data
+to do that we're going to construct our
+cost function the cost function takes
+the prediction y hat and Compares it
+to the Target y by taking y hat minus y
+this difference is called the error
+we're measuring how far off the
+prediction is from the target next let's
+compute the square of this error
+also we're going to want to compute to
+this term for different training
+examples on the training set
+so when measuring the error for example
+I will compute this squared error term
+finally we want to measure the error
+across the entire training set in
+particular let's sum up the squared
+errors like this will sum from I equals
+1 2 3 all the way up to m and remember
+that m is the number of trade examples
+which is 47 for this data set notice
+that we have more training examples m is
+larger and your cost function will
+calculate a big number since it's
+summing over more examples so to build a
+cost function that doesn't automatically
+get bigger as a trading set size gets
+larger
+by convention we will compute the
+average squared error instead of the
+total squared error and we do that by
+dividing by m like this
+okay we're nearly there
+just one last thing
+by convention the cost function that
+machine learning people use actually
+divides by 2 times M the extra division
+by 2 is just meant to make some of our
+later calculations a little bit neater
+but the cost function still works when
+you include this division by two or not
+so this expression right here is the
+cost function and we're going to write J
+of WB to refer to the cost function
+this is also called the squared error
+cost function and it's called this
+because you're taking the square of
+these error terms
+in machine learning different people
+will use different cost functions for
+different applications but this great
+error cost function is by far the most
+commonly used one for linear regression
+and for that matter for all regression
+problems where it seems to give good
+results for many applications
+so just as a reminder
+the prediction why hat is equal to the
+output of the model f at X
+so we can rewrite the cost function J of
+WB as 1 over 2 m times the sum from y
+equals 1 to m of f of x i minus y i the
+quantity squared
+eventually we're going to want to find
+values of w and B that make the cost
+function small
+but before going there let's first gain
+more intuition about what J of WB is
+really Computing at this point you might
+be thinking we've done a whole lot of
+nav to define the cost function but what
+exactly is it doing let's go on to the
+next video where we'll step through one
+example of what the cost function is
+really Computing the help will help you
+build intuition about what it means if
+jfwb is large versus if the COS J is
+small let's go on to the next video

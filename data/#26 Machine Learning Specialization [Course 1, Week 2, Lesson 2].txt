@@ -1,0 +1,158 @@
+let's look at how you can Implement
+feature scaling to take features that
+take on very different ranges of values
+and scale them to have comparable ranges
+of value to each other so how do you
+actually scale features well if X1
+ranges from three to two thousand one
+way to get the scale version of X1 is to
+take each original X1 value and divide
+by 2000 the maximum of the range so the
+scale of X1 will range from 0.15 up to
+one
+similarly since X2 ranges from 0 to 5
+you can calculate a scale version of X2
+by taking each original X2 and dividing
+by 5 which is again the maximum so the
+scale X2 will now range from 0 to 1.
+so if you plot the scaled X1 and X2 on
+the graph it might look like this
+in addition to dividing by the maximum
+you can also do what's called mean
+normalization
+so what this looks like is you started
+the original features and then you
+rescale them so that both of them are
+centered around zero
+so whereas before they only had values
+greater than zero now they have both
+negative and positive values but maybe
+usually between negative one and plus
+one
+so to calculate the mean normalization
+of X1 first find the average also called
+the mean of X1 on your training set and
+let's call this mean new one with this
+being the Greek alphabet mu for example
+you may find that the average of feature
+one mu 1 is 600 square feet so let's
+take each X1 subtract the mean mu 1
+and then let's divide by the difference
+2000 minus 300 where 2000 is the maximum
+and 300 the minimum and if you do this
+you get the normalized X1 to range from
+negative 0.18 to 0.82
+similarly to mean normalize X2 you can
+calculate the average of feature 2 and
+for instance mu 2 may be 2.3
+then you can take each X2 subtract mu 2
+and divide by 5 minus zero again the max
+5 minus the Min which is 0
+the mean normalize X2 now ranges from
+negative 0.46 to 0.54
+so if you plot the training data using
+the mean normalized X1 and X2 it might
+look like this
+one last common rescaling method called
+z-score normalization
+to implement z-score normalization you
+need to calculate something called the
+standard deviation of each feature if
+you don't know what the standard
+deviation is don't worry about it you
+won't need to know it for this class or
+if you've heard of the normal
+distribution or the bell shaped curve
+sometimes also called the gaussian
+distribution this is what the standard
+deviation for the normal distribution
+looks like but if you haven't heard of
+this you don't need to worry about that
+either but if you do know what is the
+standard deviation then to implement a
+z-score normalization you first
+calculate the mean mu as well as the
+standard deviation which is often
+denoted by the lowercase Greek alphabet
+Sigma of each feature
+so for instance maybe feature one has a
+standard deviation of 450 and mean 600
+then to Z score normalize X1 take each
+X1 subtract mu1 and then divide by the
+standard deviation which I'm going to
+denote as Sigma 1. and what you might
+find is that the z-score normalized X1
+now ranges from negative 0.67 to 3.1
+similarly if you calculate the second
+feature's standard deviation to be 1.4
+and mean to be 2.3 then you can compute
+X2 minus mu 2 divided by Sigma 2 and in
+this case the z-score normalized by X2
+might now range from negative 1.6 to 1.9
+so if you plot the training data on the
+normalized X1 and X2 on a graph it might
+look like this
+as a rule of thumb when performing
+feature scaling you might want to aim
+for getting the features to range from
+maybe anywhere around negative one to
+somewhere around plus one for each
+feature X
+but these values negative one and plus
+one can be a little bit loose
+so if the features range from negative
+three to plus 3 or negative 0.3 to plus
+0.3 all of these are completely okay so
+if you have a feature X1 that winds up
+being between 0 and 3 that's not a
+problem and you can rescale it if you
+want but if you don't rescale it it
+should work okay too
+or if you have a different feature X2
+whose values are between negative 2 and
+plus 0.5 again that's okay know how I'm
+rescaling it but it might be okay if you
+leave it alone as well
+but if another feature like X3 here
+ranges from negative 100 to plus 100
+then this takes on a very different
+range of values than something from
+around negative one to plus one
+so you're probably better off rescaling
+this feature X3 so that the ranges from
+something closer to negative one to plus
+one
+similarly if you have a feature X4 that
+takes on really small values say between
+negative 0.001 and plus 0.001 then these
+values are so small that means you may
+want to rescale it as well
+finally what if your feature X5 such as
+measurements of a Hospital patient's
+body temperature ranges from 98.6 to 105
+degrees Fahrenheit in this case these
+values are around 100 which is actually
+pretty large compared to other scale
+features and this will actually cause
+gradient descents to run more slowly so
+in this case feature rescaling will
+likely help
+there's almost never any harm to
+carrying out feature rescaling so when
+in doubt I encourage you to just carry
+it out and that's it for feature scaling
+with this little technique you'll often
+be able to get gradient descent to run
+much faster
+so that's feature scaling and with or
+without feature scaling when you run
+gradient descent how can you know how do
+you check if gradient descents is really
+working if it is finding you the global
+minimum or something close to it in the
+next video let's take a look at how to
+recognize if gradient descent is
+converging and then in the video after
+that this will lead to discussion of how
+to choose a good learning rate for
+gradient descent

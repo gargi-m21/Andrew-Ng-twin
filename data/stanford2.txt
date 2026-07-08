@@ -1,0 +1,293 @@
+Open source AI
+model is a key building block for
+AI and basic research today.
+A lot of AI models are accessible
+only behind a proprietary web
+interface where you can call
+someone else's proprietary model
+and get a response back, and
+that makes it a black box.
+It's much harder for
+many teams to study or
+to use in certain ways.
+In contrast to teams releasing open
+models, open ways to open source
+models that anyone can download and
+customize and use to innovate and
+build new applications on top of or
+to do academic studies on top of.
+So just a really precious,
+really important component of
+how AI innovates.
+I've been surprised at the
+intensity of the lobbying to stifle
+open source based innovations.
+I think a few companies had
+invested very large amounts of
+money into training proprietary AI
+models.
+And understandably it's annoying if
+someone else open source is a model
+that degrades the value of that
+investment.
+And so over the last year with
+lines of attack such as AI could
+cause harm, or AI on various safety
+grounds, I don't really relate
+to the raw risk of AI.
+There have been many
+lines of attack to try to put
+in place really burdensome registry
+requirements or
+licensing requirements, reporting
+requirements on the open source
+software, that if enacted candidly,
+would shut down a lot of innovation
+and damage competition.
+One of the ways to prevent
+the choke points of AI models,
+stifling innovation is open source,
+because once something is open
+source, anyone can use it.
+And that really promotes
+competition.
+And I feel like a lot of intense
+lobbying effort,
+unfortunately which some regulators
+internationally as well have
+taken seriously,
+would be very anti-competitive and
+really shut down small startups to
+favor the big tech companies that
+can deal with these
+complex compliance requirements.
+I've been speaking to
+some governments,
+some of which are considering
+having their own procurement
+processes favor open source.
+And I think that would
+be a very positive
+thing to promote open source.
+Unfortunately, at this moment in
+time, I would be quite happy if
+government doesn't even promote
+open source, but
+just doesn't actively stifle it.
+Unfortunately I'm seeing awful
+proposals for regulation, for
+example, here in California
+to propose SB 1047 would put in
+place really impossible to my mind
+safety requirements where the only
+rational response for
+a lot of teams would be to start
+releasing open source.
+One of the tricky things to
+understand about AI is it's a
+general purpose technology, useful
+for many different applications,
+kind of like electricity or
+maybe like an electric motor.
+An electric motor can be used to
+build a blender, or an electrical
+vehicle, or a dialysis machine, or
+to build a smart bomb.
+And if you were to go to an
+electric motor maker and say, can
+you guarantee that your electric
+motor won't ever be used for
+a nefarious purpose, like someone
+building a smart bomb with it, then
+there is no way for the electric
+motor maker to guarantee that.
+And the only thing they could do is
+make electric motors so
+tiny to be useful for anything, and
+we lose the blender and electric
+vehicle and dialysis machine.
+We're seeing this now in AI.
+AI is a general-purpose technology
+with tons of beneficial use cases,
+in healthcare,
+in financial services, and so on,
+and education and so on.
+I'm seeing proposals to say, can
+you guarantee your AI will never be
+used by anyone for any negative
+purpose and that's actually
+not possible because safety is not
+a function of the electric motor or
+of the AI technology,
+it's a function of the application.
+So I think I think governments have
+an important role to play to
+regulate the applications because
+we do want electrical vehicles
+to be saved.
+We do want dialysis regions to be
+saved, but that unfortunately is
+harder that I'm seeing governments
+say, well that's too hard,
+let's regulate the AI instead.
+And that,
+unfortunately will have a very
+anti-competitive stifling effect.
+AI, artificial intelligence has
+tons of good uses and
+a handful of negative use cases.
+To me, I often approach this by
+asking myself, do you think we're
+better off if there's more
+intelligence out in the world?
+Be it human intelligence or
+in this case,
+artificial intelligence.
+And yes,
+intelligence can be used for
+nefarious purposes.
+I worry about large-scale
+disinformation.
+I think that AI being used to
+generate political deepfakes,
+could be a problem.
+And I think that it is true
+that intelligence can be used for
+bad purposes.
+I also think that society has
+largely advanced by people becoming
+smarter and getting more educated.
+I think more intelligence is a good
+thing, and then having us think
+about what are the applications
+that are things we don't want, and
+to guard against or
+to regulate against that.
+I think that would be a very
+constructive thing, but
+not to regulate intelligence or
+to slow down the rise of
+intelligence itself.
+When there are new
+waves of technology,
+sometimes large incumbent companies
+will do well but it also creates
+a lot of opportunities for
+new entrants and startups.
+I think investors play a key role
+in supporting and allocating
+capital and even supporting more
+active ways, especially
+the entrepreneurial community.
+I think just to make an analogy,
+with the rise of the internet,
+some incumbents did really well.
+I think Apple and Microsoft were
+not internet companies then they
+did really well.
+And then some startups of the time,
+including, Google and Facebook Meta
+and Amazon, were startups that
+wound up doing really well.
+I think with AI too, I think some
+incumbents would do just fine, and
+that's okay, but there also be lots
+of startups that'll do really well.
+We are then just a studio, meaning
+that we don't just invest in
+startups, we actively work with the
+entrepreneurs to build the startup.
+So we end up building one startup
+per month.
+And I think that the community,
+more broadly of investors and
+builders, this is going after a lot
+of new opportunities that many
+incumbents, for whatever reason,
+are not doing so or
+not are able to do so effectively,
+and then I think this will create
+a lot of value, to get a lot of new
+exciting applications built and
+made available to people.
+One of the tricky things about AI
+is is a general purpose technology,
+meaning it's useful for
+tons of different applications.
+So I find myself simultaneously
+excited about the application of AI
+to healthcare and improving that,
+AI to education and logistics and
+financial services on and
+on and on.
+In fact, I find it difficult to
+think of a sector that AI will not
+have a meaningful impact on.
+And frankly, I think all knowledge
+workers today I think can get
+a productivity boost like right
+now using gens of AI, but
+it still will take time and work to
+identify the specific applications.
+Is it helping with patient
+scheduling?
+Is it giving people better
+financial advice?
+Is it giving people personalized
+educational coaches?
+All those specific applications,
+many of them still need to flesh it
+out and then belt and
+I think startups as well as
+incumbent companies will all play
+an important role in this.
+Now I really respect the DOJ.
+I think DOJ, rule of law,
+I mean justice,
+it's precious for the democracy so
+I just feel that way.
+And then it's just the details that
+sometimes I wonder about.
+Yeah, maybe I think, right, for
+America to be competitive,
+I think startups are a critical
+part of our ecosystem.
+I'm really encouraged to hear about
+people of a government working
+to promote competition.
+And one thing that worries me
+a little bit is the stifling of
+acquisitions.
+And I know that acquisitions
+sometimes can be anti-competitive,
+but when for example, the
+acquisition of figma was blocked,
+and I think there was a fashion
+deal that was also blocked,
+this actually has a chilling
+effect across Silicon Valley.
+And then the lack of access
+to liquidity,
+it makes it more difficult for
+many investors to keep on investing
+and keep on powering this engine
+of American innovation.
+So clearly antitrust is
+important and not all acquisitions
+are pro-competitive.
+But I do worry at this moment in
+time, if we are leaning a little
+bit too aggressively into into
+blocking acquisition types
+of transactions and
+ultimately that would damage
+the entrepreneurial ecosystem.
+I feel like government has
+an important role to play when it
+comes to antitrust, but
+I think it should be a but
+we should be careful about taking
+a balanced approach and having
+an analysis of what is actually
+pro-competition and what is not.
+

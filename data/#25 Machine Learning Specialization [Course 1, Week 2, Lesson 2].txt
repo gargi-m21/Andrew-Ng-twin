@@ -1,0 +1,140 @@
+so welcome back let's take a look at
+some techniques that make gradient
+descents work much better in this video
+you see a technique called feature
+scaling that will enable gradient
+descent to run much faster
+let's start by taking a look at the
+relationship between the size of a
+feature that is how big are the numbers
+for that feature and the size of its
+Associated parameter
+as a concrete example let's predict the
+price of a house using two features X1
+the size of the hulls and X2 the number
+of bedrooms
+let's say that X1 typically ranges from
+300 to 2000 square feet and x2 in the
+data set ranges from 0 to 5 bedrooms
+so for this example X1 takes on a
+relatively large range of values and X2
+takes on a relatively small range of
+values
+now let's take an example of a house
+that has a size of 2 000 square feet has
+five bedrooms
+and a price of 500k or 500 000 dollars
+for this one trading example what do you
+think are reasonable values for the size
+of parameters W1 and W2
+well let's look at one possible set of
+parameters
+say W1 is 50 and W2 is 0.1 and B is 50
+for the purposes of discussion
+so in this case the estimated price in
+thousands of dollars is 100
+000 K here plus 0.5 K plus 50k which is
+slightly over a hundred million dollars
+so that's clearly very far from the
+actual price of five hundred thousand
+dollars
+and so this is not a very good set of
+parameter choices for W1 and W2
+now let's take a look at another
+possibility
+say
+W1 and W2 were the other way around W1
+is 0.1 and W2 is 50 and B is still also
+50. in this choice of W1 and W2 W1 is
+relatively small and W2 is relatively
+large 50 is much bigger than 0.1
+so here the predicted price is 0.1
+times 2 000 plus 50 times 5 plus 50. the
+first term becomes 200k the second term
+becomes 250k and then plus 50. so this
+version of the model predicts a price of
+five hundred thousand dollars which is a
+much more reasonable estimate and
+happens to be the same price as the true
+price of the house
+so hopefully you might notice that when
+a possible range of values of a feature
+is large like the size in square feet
+which goes all the way up to 2000 it's
+more likely that a good model will learn
+to choose a relatively small parameter
+value like 0.1
+likewise when the possible values of a
+feature are small like the number of
+bedrooms then a reasonable value for its
+parameters will be relatively large like
+50. so how does this relate to gradient
+descent
+well let's take a look at a scatter plot
+of the features where the size is square
+feet is the horizontal axis X1 and the
+number of bedrooms X2 is on the vertical
+axis
+if you plot the training data you notice
+that the horizontal axis is on a much
+larger scale or much larger range of
+values compared to the vertical axis
+next let's look at how the cost function
+might look in a contour plot
+you might see a contour plot where the
+horizontal axis has a much narrower
+range say between 0 and 1 whereas the
+vertical axis takes on much larger
+values say between 10 and 100. so the
+Contours form ovals or ellipses and they
+are short on one side and longer on the
+other
+and this is because a very small change
+to W1 can have a very large impact on
+the estimated price and thus a very
+large impact on the cost J because W1
+tends to be multiplied by a very large
+number the size in square feet
+in contrast it takes a much larger
+change in W2 in order to change the
+predictions much and thus small changes
+to W2 don't change the cost function
+nearly as much
+so where does this leave us this is what
+might end up happening if you were to
+run gradient descent if you were to use
+your training data as is
+because the Contours are still tall and
+skinny gradient descents may end up
+bouncing back and forth for a long time
+before it can finally find its way to
+the global minimum in situations like
+this a useful thing to do is to scale
+the features this means performing some
+transformation of your training data so
+that X1 save might not range from 0 to 1
+and X2 might also range from 0 to 1. so
+today the points now look more like this
+and you might notice that the scale of
+the plot on the bottom is now quite
+different than the one on top
+the key point is that the rescale X1 and
+X2 are both now taking comparable ranges
+of values to each other
+and if you run gradient descent on a
+cost function defined on this rescaled
+X1 and X2 using this transform data then
+the Contours will look more like this
+more like circles and less tall and
+skinny and great in descents can find a
+much more direct path to the global
+minimum
+so to recap when you have different
+features that take on very different
+ranges of values it can cause gradient
+descent to run slowly but rescaling the
+different features so they all take on
+comparable range of values can speed
+upgrade and descent significantly
+how do you actually do this let's take a
+look at that in the next video

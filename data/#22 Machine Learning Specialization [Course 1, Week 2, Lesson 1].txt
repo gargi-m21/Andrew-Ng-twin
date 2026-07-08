@@ -1,0 +1,150 @@
+in this video you see a very useful idea
+called vectorization when you're
+implementing a learning algorithm using
+vectorization will both make your code
+shorter and also make it run much more
+efficiently
+learning how to write vectorized code
+will allow you to also take advantage of
+modern numerical linear algebra
+libraries as well as maybe even GPU
+Hardware that stands for graphics
+processor unit this is hardware
+originally designed to speed up computed
+Graphics in your computer but turns out
+can be used when you write vectorized
+code to also help you execute your code
+much more quickly let's look at the
+concrete example of what vectorization
+means
+here's an example with parenthesis W and
+B where W is a vector with three numbers
+and you also have a vector of features x
+with also three numbers so here n is
+equal to three
+so notice that in linear algebra the
+index or the counting starts from one
+and so the first value is subscripted W1
+and X1
+in Python code you can Define these
+variables w b and X using arrays like
+this here I'm actually using a numerical
+linear algebra library in Python called
+numpy which is by far the most widely
+used numerical linear algebra library in
+Python and in machine learning
+because in Python the indexing of arrays
+while counting in arrays starts from
+zero you would access the first value of
+w using W square bracket zero the second
+value using W square bracket one and the
+third using W square bracket two so the
+indexing here goes from 0 1 to 2 rather
+than one two to three
+similarly to access individual features
+of x you would use x0 X1 and X2 many
+programming languages including python
+start counting from zero rather than one
+now let's look at an implementation
+without vectorization for computing the
+model's prediction in codes it would
+look like this you take each parameter W
+and multiply it by its Associated
+feature
+now you could register code like this
+but what if n is in three but instead N
+is a hundred or a hundred thousand is
+both inefficient for you to code and
+inefficient for your computer to compute
+so here's another way still without
+using vectorization by using a for Loop
+in math you can use a summation operator
+to add all the products of WJ and XJ for
+J equals 1 through n
+then outside the summation you add B at
+the end
+so the summation goes from J equals 1 up
+to and including n for n equals three
+J therefore goes from 1 2 to 3. in code
+you can initialize F to 0
+then for J and range from 0 to n this
+actually makes J go from 0 to n minus 1
+so from 0 1 to 2 you can then add 2f the
+product of WJ times x j finally outside
+the for Loop you add B
+notice that in Python the range 0 to N
+means that J goes from 0 all the way to
+n minus 1 and does not include NSO
+and more commonly this is written range
+n in Python but in this video I added a
+0 here just to emphasize that it starts
+from zero
+while this implementation is a bit
+better than the first one it still
+doesn't use factorization and isn't that
+efficient
+now let's look at how you can do this
+using vectorization
+this is the math expression of the
+function f which is the dot product of w
+and X plus b
+and now you can implement this with a
+single line of Code by Computing FP
+equals NP dot dot I said dot dot because
+the first dot is the period and the
+second dot is the function or the method
+called Dot
+but as FP equals NP dot dot w comma X
+and this implements the mathematical dot
+product between the vectors W and x and
+then finally you can add B to it at the
+end
+this numpy dot function is a vectorized
+implementation of the dot product
+operation between two vectors and
+especially when n is large this will run
+much faster than the two previous code
+examples
+I want to emphasize that factorization
+actually has two distinct benefits first
+it makes the code shorter is now just
+one line of code Isn't that cool and
+second it also results in your code
+running much faster than either of the
+two previous implementations that did
+not use factorization
+and the reason that the vectorized
+implementation is much faster is behind
+the scenes the numpy dot function is
+able to use parallel Hardware in your
+computer and this is true whether you're
+running this on a normal computer that
+is on a normal computer CPU or if you
+are using a GPU a graphics processor
+unit that's often used to accelerate
+machine learning jobs and the ability of
+the numpy dots function to use parallel
+Hardware makes it much more efficient
+than the for Loop or the sequential
+calculation
+that we saw previously
+now this version is much more practical
+when n is large because you are not
+typing w0 times x0 plus W1 times X1 plus
+lots of additional terms like you would
+have had for the previous version but
+while this saves a lot on the typing
+it's still not that computationally
+efficient because it still doesn't use
+factorization
+so to recap vectorization makes your
+code shorter so hopefully easier to
+write and easier for you or others to
+read and it also makes it run much
+faster
+but what is this magic behind
+factorization that mixes run so much
+faster let's take a look at what your
+computer is actually doing behind the
+scenes to make vectorized code run so
+much faster

@@ -1,0 +1,195 @@
+in this video we'll figure out how to
+get gradient descent to work with
+regularized linear regression let's jump
+in here's the cost function we come up
+with in the last video for regularized
+linear regression
+the first part is the usual squared
+error cost function and now you have
+this additional regularization term
+where Lambda is the regularization
+parameter and you'd like to find
+parameters W and B that minimize the
+regularized cost function
+previously we were using gradient
+descents for the original cost function
+just the first term before we added that
+second regularization term
+and previously we had the following
+gradient descent algorithm which is that
+we repeatedly update the parameters WJ
+and B for J equals 1 through n according
+to this formula and B is also updated
+similarly
+again Alpha is a very small positive
+number called The Learning rate in fact
+the updates for regularized linear
+regression look exactly the same except
+that now the cost J is defined a bit
+differently
+previously the derivative of J with
+respect to W J was given by this
+expression over here and the derivative
+with respect to B was given by this
+expression over here
+now that we've added this additional
+regularization term the only thing that
+changes is that the expression for the
+derivative with respect to WJ ends up
+with one additional term
+this plus Lambda over M times W J
+and in particular for the new definition
+of the cost function J these two
+expressions over here these are the new
+derivatives of J with respect to WJ
+and the derivative of J with respect to
+B
+recall that we don't regularize B so
+we're not trying to shrink B that's why
+the updated B Remains the Same as before
+whereas the updated W changes because
+the regularization term causes us to try
+to shrink W J
+so let's take these definitions for the
+derivatives and put them back into the
+expression on the left to write out the
+gradient descent algorithm for
+regularized linear regression
+so to implement gradient descent for
+regularized linear regression this is
+what you would have your code to
+here's the update for WJ for J equals 1
+through n and here's the update for B
+and as usual please remember to carry
+out simultaneous updates for all of
+these parameters
+now in order for you to get this
+algorithm to work this is all you need
+to know but what I'd like to do in the
+remainder of this video is to go over
+some optional material to convey a
+slightly deeper intuition about what
+this formula is actually doing as well
+as chat briefly about how these
+derivatives are derived the rest of this
+video is completely optional it's
+completely okay if you skip the rest of
+this video
+um but if you have a stronger interest
+in math then stick with me it's always
+nice to hang out with you here and
+through these equations perhaps you can
+build a deeper intuition about what the
+math and what the differences are doing
+as well so let's take a look
+let's look at the update rule for WJ and
+rewrite it in another way
+we're updating WJ as
+1 times WJ minus Alpha times Lambda over
+M times WJ submove the term from the end
+to the frontier
+and then minus Alpha times 1 over M and
+then the rest of that term over there
+so we just rearrange the terms a little
+bit
+and if we simplify then we're saying
+that WJ is updated as WJ times 1 minus
+Alpha
+times Lambda over m minus Alpha times
+this other term over here and you might
+recognize this second term as the usual
+gradient descent update for
+unregularized linear regression
+this is the update for linear regression
+before we had regularization and this is
+the term we saw in week two of this
+course
+and so the only change when you add
+regularization is that instead of WJ
+being set to be equal to
+WJ minus Alpha times this term is now W
+Times this number minus the usual update
+so this is what we had in week one of
+this course so what is this first term
+over here well Alpha is a very small
+positive number say 0.01 Lambda is
+usually a small number say one or maybe
+10
+let's say Lambda is one for this example
+and M is the training set size say 50.
+and so when you multiply Alpha Lambda
+over m
+say
+0.01 times 1 divided by 50 this term
+ends up being a small positive number
+say 0.0002
+and thus 1 minus Alpha Lambda over m is
+going to be a number just slightly less
+than one in this case 0.9998
+and so the effect of this term is that
+on every single iteration of gradient
+descent you're taking WJ and multiplying
+it by
+0.998 that is by some numbers slightly
+less than one before carrying out the
+usual update
+so what organization is doing on every
+single iteration is you're multiplying W
+by a number slightly less than one and
+that has the effect of shrinking the
+value of WJ just a little bit
+so this gives us another view on why
+regularization has the effect of
+shrinking the parameters WJ a little bit
+on every iteration and so that's how
+regularization works
+if you're curious about how these
+derivative terms were computed I have
+just one last optional slide that goes
+through just a little bit of a
+calculation of the derivative term again
+this slide and the rest of this video
+are completely optional meaning you
+won't need any of this to do the
+practice labs and the quizzes
+so let's step through quickly the
+derivative calculation
+the derivative of J with respect to
+WJ looks like this
+recall that f of x for linear regression
+is defined as w dot X plus b
+or w dot product X plus b
+and it turns out that by the rules of
+calculus the derivatives look like this
+is one over two M times the sum I equals
+1 through m
+of w dot X plus b
+minus y times
+2 x j plus the derivative of the
+regularization term which is Lambda over
+2m times 2 W J
+notice that the second term does not
+have the summation term from J equals 1
+through n anymore
+the twos cancel out here and here and
+also here and here
+and so it simplifies to this expression
+over here
+and finally remember that W X plus b is
+f of x and so you can rewrite it as this
+expression down here
+so this is why this expression is used
+to compute the gradient in regularized
+linear regression
+so you now know how to implement
+regularized linear regression using this
+you really reduce overfitting when you
+have a lot of features and a relatively
+small training set and this should let
+you get linear regression to work much
+better on many problems
+in the next video we'll take this
+regularization idea and apply it to
+logistic regression to avoid overfitting
+for logistic regression as well let's
+take a look at that in the next video

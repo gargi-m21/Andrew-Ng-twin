@@ -1,0 +1,134 @@
+let's look at some more visualizations
+of wnp
+here's one example
+over here you have a particular points
+on the graph J for this point w equals
+about negative 0.15 and b equals about
+800. so this point corresponds to one
+pair of values for w and B that yields a
+particular cos J
+and in fact this particular pair of
+values for wnb corresponds to this
+function f of x which is this line that
+you can see on the left
+this line intersects the vertical axis
+at 800 because b equals 800 and the
+slope of the line is negative 0.15
+because W equals negative 0.15
+now if you look at the data points in
+the training set you may notice that
+this line is not a good fit to the data
+for this function f of x with these
+values of w and B many of the
+predictions for the value of y are quite
+far from the actual Target value of y
+that is in the training data
+because this line is not a good fit if
+you look at the graph of J the cause of
+this line is out here which is pretty
+far from the minimum
+is a pretty high cost because this
+choice of wnb is just not that good a
+fit to the training set
+now let's look at another example with a
+different choice of w and B
+now here is another function that is you
+know still not a great fit for the data
+but maybe slightly less bad
+so this point here represents the calls
+for this particular pair of w and B that
+creates that line
+the value of w is equal to zero and the
+value of B is about 360.
+this pair of parameters corresponds to
+this function which is a flat line
+because f of x equals zero times X plus
+360. I hope that makes sense
+let's look at yet another example
+here's one more choice for wnb and with
+these values you end up with this line f
+of x again not a great fit to the data
+it is actually further away from the
+minimum compared to the previous example
+and remember that the minimum is at the
+center of that smallest ellipse
+last example if you look at f of x on
+the left this looks like a pretty good
+fit to the training set you can see on
+the right this point representing the
+cost is very close to the center of the
+small ellipse is not quite exactly the
+minimum but it's pretty close
+for this value of w and B you get this
+line f of x
+you can see that if you measure the
+vertical distances between the data
+points and the predicted values on the
+straight line you get the error for each
+data point
+the sum of squared errors for all of
+these data points is pretty close to the
+minimum possible sum of squared errors
+among all possible straight line fits
+I hope that by looking at these figures
+you can get a better sense of how
+different choices of the parameters
+affect the line f of x and how this
+corresponds to different values for the
+cost J
+and hopefully you can see how the better
+fit lines correspond to points on the
+graph of J that are closer to the
+minimum possible cost for this cost
+function J of w and B
+in the optional lab that follows this
+video you get to run some code and
+remember all that the code is given so
+you just need to hit shift enter to run
+it and take a look at it and the lab
+will show you how the cost function is
+implemented in code
+and given a small trading set and
+different choices for the parameters
+you'll be able to see how the cost
+varies depending on how well the model
+fits the data
+in the optional lab you also can play
+with an interactive console plot check
+this out you can use your mouse cursor
+to click anywhere on the Contour plot
+and you will see the straight line
+defined by the values you chose for the
+parameters wmp
+you see a dots appear also on the 3D
+surface plot showing the cost
+finally the optional lab also has a 3D
+surface plot that you can manually
+rotate and spin around using your mouse
+cursor to take a better look at what the
+cost function looks like
+I hope you enjoy playing with the
+optional lab
+now the linear regression rather than
+having to manually try to read the
+Contour plot for the best value for wmb
+which isn't really a good procedure and
+also won't work once we get to more
+complex machine learning models what you
+really want is an efficient algorithm
+that you can write in code for
+automatically finding the values of
+parameters wmb they gives you the best
+fit line that minimizes the cost
+function J
+there is enough room for doing this
+called gradient descent this algorithm
+is one of the most important algorithms
+in machine learning great in descent and
+variations on creating descent are used
+to train not just linear regression but
+some of the biggest and most complex
+models in all of AI
+so let's go to the next video to dive
+into this really important algorithm
+called gradient descent

@@ -1,0 +1,147 @@
+let's look in this video at the process
+of how supervised Learning Works
+supervised learning algorithm will input
+the data set and then what exactly does
+it do and what does it output let's find
+out in this video
+recall that a training set in supervised
+learning includes both the input
+features such as the size of the house
+and also the output targets such as the
+price of the house the output targets
+are the right answers to the model we'll
+learn from
+to train the model you feed the trading
+set both the input features and the
+output targets to your learning
+algorithm
+then your supervised learning algorithm
+will produce some function
+we'll write this function as lowercase f
+where F stands for function historically
+this function used to be called a
+hypothesis but I'm just going to call it
+a function f in this clause
+and the job of f is to take a new input
+X
+and upwards an estimate or prediction
+which I'm going to call Y hat and it's
+written like the variable y with this
+little hat symbol on top
+in machine learning the convention is
+that y hat is the estimate or the
+prediction for y
+the function f is called the model
+X is called the input or the input
+feature and the output of the model is
+the prediction y hat
+the model's prediction is the estimated
+value of y
+when the symbol is just a letter Y then
+that refers to the Target which is the
+actual True Value in the training set in
+contrast y hat is an estimate it may or
+may not be the actual True Value
+well if you're helping your client to
+sell the house well the true price of
+the house is unknown until they sell it
+so your model f given the size or
+pressure price which is the estimated
+that is the prediction of what the true
+price will be
+now when we design a learning algorithm
+a key question is how are we going to
+represent the function f or in other
+words what is the math formula we're
+going to use to compute f
+for now let's stick with f being a
+straight line
+so your function can be written as F
+subscript W comma B of x equals I'm
+going to use W Times X plus b
+I'll Define w and B soon but for now
+just know that W and B are numbers and
+the values chosen for w and B will
+determine the prediction y hat based on
+the input feature X so this FWB of X
+means f is a function that takes X's
+input and depending on the values of w
+and b f will output some value of a
+prediction y hat
+as an alternative to writing this FW
+comma B of X I'll sometimes just write f
+of x without explicitly including W and
+B in the subscript it's just a simple
+notation but means exactly the same
+thing as FWB of x
+let's plot the trading set on the graph
+where the input feature X is on the
+horizontal axis and the output targets Y
+is on the vertical axis remember the
+album learns from this data and
+generates a best fit line like maybe
+this one here
+this straight line is the linear
+function f w b of x equals W Times X
+plus b
+or more simply we can drop W and B and
+just write f of x equals WX plus b
+here's what this function is doing is
+making predictions for the value of y
+using a straight line function of x
+so you may ask why are we choosing a
+linear function where linear function is
+just a fancy term for a straight line
+instead of some nonlinear function like
+a curve or a parabola
+well sometimes you want to fit more
+complex non-linear functions as well
+like a curve like this but since this
+linear function is relatively simple and
+easy to work with let's use a line as a
+foundation that will eventually help you
+to get to more complex models that are
+non-linear
+this particular model as a name is
+called linear regression more
+specifically this is linear regression
+with one variable with a phrase one
+variable means that there's a single
+input variable or feature X namely the
+size of the host
+another name for a linear model with one
+input variable is univariate linear
+regression where uni means one in Latin
+and where variate means variable so univ
+variance is just a fancy way of saying
+one variable
+in a later video you also see a
+variation of regression where you want
+to make a prediction based not just on
+the size of a hose but on a bunch of
+other things that you may know about the
+whole such as number of bedrooms and
+other features and by the way when
+you're done with this video there is
+another optional lab you don't need to
+write any code just review it run the
+code and see what it does that will show
+you how to define in Python a straight
+line function and the lab will let you
+choose the values of wmb to try to fit
+the training data
+you don't have to do the lab if you
+don't want to but I hope you play of it
+when you're done watching this video
+so that's linear regression in order for
+you to make this work one of the most
+important things you have to do is
+construct a cost function
+the idea of a cost function is one of
+the most universal and important ideas
+in machine learning and is used in both
+linear regression and in training many
+of the most advanced AI models in the
+world so let's go on to the next video
+and take a look at how you can construct
+a cost function

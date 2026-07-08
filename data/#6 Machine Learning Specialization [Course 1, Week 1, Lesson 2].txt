@@ -1,0 +1,216 @@
+after supervised learning the most
+widely used form of machine learning is
+unsupervised learning let's take a look
+at what that means
+we've talked about civilized learning
+and this video is about unsupervised
+learning but don't let the name
+unsupervised through you unsupervised
+learning is I think just as super as
+supervised learning
+when we're looking at supervised
+learning in the last video record it
+looks something like this in the case of
+a classification problem each example
+was associated with an upward label y
+such as benign or malignant designated
+by the O's and Crosses
+in unsupervised learning we're given
+data that isn't associated with any
+output labels y
+say you're given data on patients and
+their tumor size and the patient's age
+but not whether the tumor was benign or
+malignant
+so the data set looked like this on the
+right
+we're not asked to diagnose whether the
+tumor
+is benign or malignant
+because we're not given any labels y in
+the data set instead our job is to find
+some structure or some pattern or just
+find something interesting in the data
+this is unsupervised learning we call it
+unsupervised because we're not trying to
+supervise the algorithm to give some
+quote right answer for every input
+instead we ask the algorithm to figure
+out all by itself what's interesting or
+what patterns or structures they might
+be in this data
+with this particular data set an
+unsupervised learning algorithm might
+decide that the data can be assigned to
+two different groups or two different
+clusters
+and so you might decide that there's one
+cluster
+or group over here
+and there's another cluster or group
+over here
+this is a particular type of
+unsupervised learning called a
+clustering algorithm because it places
+the unlabeled data into different
+clusters and this turns out to be used
+in many applications
+for example clustering is used in Google
+News what Google News does is every day
+it goes and looks at hundreds of
+thousands of news articles on the
+internet and groups related stories
+together for example here is a sample
+from Google News where the headline of
+the top article is giant Panther gives
+birth to rear twin clubs at Japan's
+older Zoo this article has actually
+caught my eye because my daughter loves
+pandas and so there are a lot of stuff
+Panda toys and watching of panda videos
+in my halls and looking at this you
+might notice that below this are other
+related articles
+maybe from the headlines alone you can
+start to guess what clustering might be
+doing
+notice that the word Panda appears here
+here here here here
+and here
+and notice that the word twin also
+appears in all five articles
+and the word Zoo also appears in all of
+these articles
+so the clustering algorithm is finding
+articles out of all the hundreds of
+thousands of news articles on the
+internet that day
+finding the articles that mentions
+similar words and grouping them into
+clusters
+now what's cool is that this clustering
+algorithm figures out on his own which
+words suggest that certain articles are
+in the same group what I mean is there
+isn't an employee at Google News who's
+telling the algorithm to find articles
+that the word Pander and Twins and Zoo
+to put them into the same cluster the
+news topics change every day and there
+are so many new stories it just isn't
+feasible to have people doing this every
+single day for all the topics the news
+covers instead the algorithm has to
+figure out on his own without
+supervision what are the clusters of
+news articles today so that's why
+discussing algorithm is a type of
+unsupervised learning algorithm let's
+look at a second example of unsupervised
+learning applied to clustering genetic
+or DNA data
+this image shows a picture of DNA
+microarray data these look like tiny
+grids of a spreadsheet and each tiny
+column represents the genetic or DNA
+activity of one person
+so for example this entire column here
+is from one person's DNA and this other
+column is of another person each row
+represents a particular Gene so just as
+an example perhaps this row here might
+represent the gene that affects eye
+color
+or this row here is a gene that affects
+how tall someone is
+researchers have even found a genetic
+link to whether someone dislikes certain
+vegetables such as broccoli or brussels
+sprouts or asparagus
+so next time someone asks you why didn't
+you finish your salad you can tell them
+oh maybe it's genetic
+for DNA microarrays the idea is to
+measure how much certain genes are
+expressed for each individual person
+so these colors red green gray and so on
+show the degree to which different
+individuals do or do not have a specific
+Gene active
+and what you can do is then run a
+clustering algorithm to group
+individuals into different categories or
+different types of people like maybe
+these individuals are grouped together
+and let's just call this type one
+and these people are grouped into type 2
+and these people are grouped as type 3.
+this is unsupervised learning because
+we're not telling the algorithm in
+advance that there is a type one person
+with certain characteristics or a type 2
+person with certain characteristics
+instead what we're saying is here's a
+bunch of data I don't know what the
+different types of people are but can
+you automatically find structure in the
+data and automatically figure out what
+are the major types of individuals since
+we're not giving the algorithm the right
+answer for the examples in advance this
+is unsupervised learning
+here's a third example
+many companies have huge databases of
+customer information
+given this data can you automatically
+group your customers into different
+market segments so that you can more
+efficiently serve your customers
+concretely the Deep learning.ai team did
+some research to better understand the
+Deep learning.ai community and why
+different individuals take these classes
+subscribe to the batch Weekly Newsletter
+or attend our pile AI events let's
+visualize the Deep learning or AI
+Community as this collection of people
+running clustering that is Market
+segmentation
+found a few distinct groups of
+individuals
+one group's primary motivation is
+seeking knowledge to grow their skills
+perhaps this is you and so that's great
+a second group's primary motivation is
+looking for a way to develop their
+career maybe you want to get a promotion
+or a new job or make some career
+progression if this describes you that's
+great too and yet another group wants to
+stay updated on how AI impacts their
+field of work the house this is you
+that's great too this is a classroom
+that our team use to try to better serve
+our community as we're trying to figure
+out whether the major categories of
+Learners in the Deep learning community
+so if any of these is your top
+motivation for learning that's great and
+I hope I'll be able to help you on your
+journey or in case this is you and you
+want something totally different than
+the other three categories that's fine
+too and I want you to know I love you
+all the same
+so to summarize a clustering algorithm
+which is a type of unsupervised learning
+algorithm takes data without labels and
+tries to automatically group them into
+clusters and so maybe the next time you
+see or think of a panda maybe you think
+of clustering as well
+and besides clustering there are other
+types of unsupervised learning as well
+let's go on to the next video to take a
+look at some other types of unsupervised
+learning algorithms

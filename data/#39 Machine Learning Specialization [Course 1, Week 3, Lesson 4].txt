@@ -1,0 +1,204 @@
+in the last video we saw that
+regularization tries to make the
+parameter values W1 through WN small to
+reduce overfitting in this video we'll
+build on that intuition and develop a
+modified cost function for your learning
+algorithm that you can use to actually
+apply regularization let's jump in
+recall this example from the previous
+video in which we saw that if you fit a
+quadratic function to this data it gives
+a pretty good fit but if you fit a very
+high order polynomial you end up with a
+curve that overfits the data but now
+consider the following
+suppose that you had a way to make the
+parameters W3 and W4 really really small
+say close to zero
+here's what I mean
+let's say instead of minimizing this
+objective function this is the cost
+function for linear regression
+let's say you were to modify the cost
+function and add to it 1000 times W3
+squared plus 1000 times W 4 squared and
+here I'm just choosing 1000 because it's
+a big number but any other really large
+number would be okay
+so with this modified cost function you
+in effect be penalizing the model if W3
+and W4 are large because if you want to
+minimize this function the only way to
+make this new cost function small is if
+W3 and W4 are both small right because
+otherwise this 1000 times W3 squared and
+1000 times W4 Square terms are going to
+be really really big
+so when you minimize this function
+you're going to end up with W3 close to
+0 and W4 close to zero so we're
+effectively nearly canceling out the
+effect of the features execute and x to
+the power of 4 and getting rid of these
+two terms over here
+and if we do that then we end up with a
+fit to the data that's much closer to
+the quadratic function including maybe
+just tiny contributions from the
+features X cubed and x to the 4.
+and this is good because it's a much
+better fit to the data compared to if
+all the parameters could be large and
+you end up with this weekly quadratic
+function more generally here's the idea
+behind regularization the idea is that
+if there are smaller values for the
+parameters then that's a bit like having
+a simpler model maybe one with fewer
+features which is therefore less prone
+to overfitting
+on the last slide we penalize or we say
+we regularized only W3 and W4
+but more generally the way that
+regularization tends to be implemented
+is if you have a lot of features say 100
+features you may not know which are the
+most important features and which ones
+to penalize so the way regularization is
+typically implemented is to penalize all
+of the features or more precisely you
+penalize all the WJ parameters and it's
+possible to show that this will usually
+result in fitting a smoother simpler
+Less weekly function that's less prone
+to overfitting
+so for this example if you have data
+with 100 features for each house it may
+be hard to pick in advance which
+features to include and which ones
+exclude so let's build a model that uses
+all 100 features
+so you have these 100 parameters W1
+through w100 as well as 101st parameter
+B because we don't know which of these
+parameters are going to be the important
+ones let's penalize all of them a bit
+and Shrink all of them by adding this
+new term Lambda times the sum from J
+equals 1 through n where n is 100 the
+number of features of WJ squared
+this value Lambda here is the Greek
+alphabet Lambda and it's also called a
+regularization parameter
+so similar to picking a learning rate
+Alpha you now also have to choose a
+number for Lambda
+a couple things I would like to point
+out by convention instead of using
+Lambda times the sum of WJ squared
+we also divide Lambda by 2m so that both
+the first and second terms here are
+scaled by one over two m
+it turns out that by scaling both terms
+the same way it becomes a little bit
+easier to choose a good value for longer
+and in particular you find that even if
+your training set size grows say you
+find more training examples so M the
+trading set size is now bigger the same
+value along the the year I picked
+previously is now also more likely to
+continue to work if you have this extra
+scaling by 2m
+also by the way by convention we're not
+going to penalize the parameter B for
+being large in practice it makes very
+little difference whether you do or not
+and some machine learning engineers and
+actually some learning implementations
+will also include longer over 2m times
+the B squared term
+but this makes very little difference in
+practice and the more common convention
+which we'll use in this course is to
+regularize only the parameters W routed
+into parameter B
+so to summarize
+in this modified cost function we want
+to minimize the original cost which is
+the mean squared error Cost Plus
+Additionally the second term which is
+called the regularization term
+and so this new cost function trades off
+two goals that you might have
+Trying to minimize this first term
+encourages the algorithm to fit the
+training data well by minimizing the
+square differences of the predictions
+and the actual values and try to
+minimize the second term the algorithm
+also tries to keep the parameters WJ
+small which will tend to reduce
+overfitting
+the value of Lambda that you choose
+specifies the relative importance or the
+relative trade-off or how you balance
+between these two goals
+let's take a look at what different
+values of launder will cause your
+learning algorithm to do
+let's use the housing price prediction
+example using linear regression so f of
+x is the linear regression model
+if Lambda was set to be zero then you're
+not using the regularization term at all
+because the regularization term is
+multiplied by zero and so if Lambda was
+Zero you end up fitting this overly
+weekly overly complex curve and it
+overfits
+so that was one extreme of if Lambda was
+Zero let's now look at the other extreme
+if you set Lambda to be a really really
+large number say Lambda equals 10 to the
+power of 10.
+then you're placing a very heavy weight
+on this regularization term on the right
+and the only way to minimize this is to
+be sure that all the values of w are
+pretty much very close to zero
+so if Lambda is very very large the
+learning algorithm will choose W1 W2 W3
+and W4 to be extremely close to zero and
+thus f of x is basically equal to B and
+so the learning algorithm fits a
+horizontal straight line and underfits
+to recap if Lambda is zero this model
+will overfit
+if launder is enormous like 10 to the
+power of 10 this model will underfit and
+so what you want is some value of Lambda
+that is in between that more
+appropriately balances these first and
+second terms of trading off minimizing
+the mean squared error and keeping the
+parameters small
+and when the value of Lambda is not too
+small and not too large but just right
+then hopefully you end up able to fit a
+fourth order polynomial keeping all of
+these features but with a function that
+looks like this
+so that's how regularization works when
+we talk about model selection later in
+the specialization we'll also see a
+variety of ways to choose good values
+for Lambda
+in the next two videos we'll flesh out
+how to apply regularization to linear
+regression and logistic regression and
+how to train these models with gradient
+descent with that you'll be able to
+avoid overfitting with both of these
+algorithms

@@ -1,0 +1,114 @@
+in this class you learn about the
+state-of-the-art and also practice
+implementing machine learning algorithms
+yourself
+you learn about the most important
+machine learning algorithms some of
+which are exactly what's being used in
+large AI or large tech companies today
+and you get a sense of what is the state
+of the art in AI
+Beyond learning the algorithms though in
+this class you also learn all the
+important practical tips and tricks for
+making them perform well and you get to
+implement them and see how they work for
+yourself
+so why is machine learning so widely
+used today
+machine learning had grown up as a
+subfield of AI or artificial
+intelligence we wanted to build
+intelligent machines and it turns out
+that there are a few basic things there
+could program a machine to do such as
+how to find the shortest path from A to
+B like in your GPS but for the most part
+we just did not know how to write an
+explicit program to do many of the more
+interesting things such as perform web
+search recognize human speech diagnose
+diseases from x-rays or build a
+self-driving car
+the only way we knew how to do these
+things was to have a machine learn to do
+it by itself
+for me when I found it and was leading
+the Google brain team I worked on
+problems like speech recognition
+computer vision for Google Maps street
+view images and advertising or leading
+AI by 2 I worked on everything from AI
+for augmented reality to compacting
+payment frauds to Leading a self-driving
+car team
+most recently Atlanta ai ai fund and
+Stanford University have been getting to
+work on their applications in
+manufacturing large-scale agriculture
+Healthcare e-commerce and other problems
+today there are hundreds of thousands
+perhaps millions of people working on
+machine learning applications that could
+tell you similar stories about their
+work with machine learning
+when you've learned these skills I hope
+that you too will find it great fun to
+dabble in exciting different
+applications and maybe even different
+Industries
+in fact I find it hard to think of any
+industry that machine learning is
+unlikely to touch in a significant way
+now in the near future
+looking even further into the future
+many people including me are excited
+about the AI dream of someday building
+machines as intelligent as you or me
+this is sometimes called artificial
+general intelligence or AGI
+I think AGI has been overhyped and was
+still a long way away from that goal I
+don't know it will take 50 years or 500
+years or longer to get there but most AI
+researchers believe that the best way to
+get closer to what that goal is by using
+learning algorithms maybe once that take
+some inspiration from how the human
+brain works you also hear a little more
+about this quest for AGI later in this
+course
+according to a study by Mackenzie Ai and
+machine learning is estimated to create
+an additional 13 trillion US dollars of
+value annually by the year 2030.
+even though machine learning is already
+creating tremendous amounts of value in
+the software industry
+I think there could be even vastly
+greater value that is yet to be created
+outside the software industry in sectors
+such as retail travel Transportation
+Automotive materials manufacturing and
+so on
+because of the massive untapped
+opportunities across so many different
+sectors today there is a vast
+unfulfilled demand for this skill set
+that's why this is such a great time to
+be learning about machine learning
+if you find machine learning
+applications exciting I hope you stick
+with me through this course I can almost
+guarantee that you find mastering these
+skills worthwhile in the next video
+we'll look at a more formal definition
+of what is machine learning and we'll
+begin to talk about the main types of
+machine learning problems and algorithms
+you pick up some of the main machine
+learning terminology and start to get a
+sense of what are the different
+algorithms and when each one might be
+appropriate
+so let's go on to the next video

@@ -1,0 +1,183 @@
+in the last video you saw one
+visualization of the cost function J of
+w or jfwb let's look at some further
+richer visualizations so you can get an
+even better intuition about what the
+cost function is doing
+here is what we've seen so far there's
+the model
+the model's parameters wmb the cost
+function J of w and B as well as the go
+of linear regression which is to
+minimize the cost function J of w and B
+over parameters W and B
+in the last video we had temporarily set
+B to zero in order to simplify the
+visualizations but now let's go back to
+the original model with both parameters
+wmp without setting B to be equal to
+zero same as last time we want to get a
+visual understanding of the model
+function f of x shown here on the left
+and how it relates to the cost function
+J of WB shown here on the right
+here's a training set of house sizes and
+prices
+let's say you pick one possible function
+of X like this one here I've set W to
+0.06 and B to 50. so f of x is 0.06
+times X Plus 50. note that this is not a
+particularly good model for this
+training set this is actually a pretty
+bad model it seems to consistently
+underestimate housing prices given these
+values for wnp let's look at what the
+cost function J of w and B may look like
+recall what we saw last time was when
+you had only w
+because we temporarily set B to zero to
+simplify things back then we had come up
+with a plot of the cost function that
+looked like this as a function of w only
+so when we had only one parameter W the
+cost function had this U-shaped curve
+shaped a bit like a super that sounds
+delicious
+now in this housing price example that
+we have on this slide we have two
+parameters W and B and so the plot
+becomes a little more complex
+it turns out that the cost function also
+has a similar shape like a Super Bowl
+except in three dimensions instead of
+two
+in fact depending on your training set
+the cost function will look something
+like this
+to me this looks like a super maybe
+because I'm a little bit hungry or maybe
+to you it looks like a curved dinner
+plate or a hammock actually that sounds
+relaxing too and there's your coconut
+drink
+maybe when you're done with this course
+you should treat yourself to a vacation
+and relax in the hammock like this what
+you see here is a 3D surface plot where
+the axes are labeled W and B
+so as you vary W and B which are the two
+parameters of the model you get
+different values for the cost function J
+of w and B
+this is a lot like the U-shaped curve
+you saw in the last video except instead
+of having one parameter w a simple in
+the J you now have two parameters W and
+B as inputs into this Super Bowl or this
+hammock shaped function J and I just
+want to point out that any single point
+on this surface represents a particular
+choice of w and B
+for example if W was -10 and B was minus
+15 then the height of the surface above
+this point is the value of J when
+W is -10 and B is minus 15. now in order
+to look even more closely at specific
+points there's another way of plotting
+the cost function J that would be useful
+for visualization which is rather than
+using these DD surface plots I'd like to
+take this exact same function J so I'm
+not changing the function J at all and
+plotted using something called a contour
+plot and if you've ever seen a
+topographical map showing how high
+different mountains are the Contours in
+the topographical map are basically
+horizontal slices of the landscape of
+say a mountain this image is of Mount
+Fuji in Japan I still remember my family
+visiting Mount Fuji when I was a
+teenager it was a beautiful sights
+and if you fly directly above the
+mountain that's what this contour map
+looks like it shows all the points that
+are at the same height for different
+heights
+at the bottom of this slide is the 3D
+surface plot of the cost function J I
+know it doesn't look very bow shaped but
+it is actually a bow just very stretched
+out which is why it looks like that in
+an optional lab that is surely to follow
+you'll be able to see this in 3D and
+spin around the surface yourself and
+it'll look more obviously bow shaped
+there
+next here on the upper right is a
+contour plot of this exact same cost
+function as that shown at the bottom
+the two axes on this Contour plot are B
+on the vertical axis and W on the
+horizontal axis what each of these ovals
+also called Ellipsis shows is the center
+points on the 3D surface which are at
+the exact same height in other words the
+set points which have the same value for
+the cost function J
+so to get a console plot you take the 3D
+surface at the bottom and you use a
+knife
+to slice it horizontally
+you take horizontal slices of that 3D
+surface and get all the points that are
+at the same height
+therefore each horizontal slice ends up
+being shown as one of these ellipses or
+one of these ovals
+so concretely if you take that point and
+that point and that point
+all of these three points have the same
+value for the cost function J
+even though they have different values
+for w and B
+and in the figure on the upper left you
+see also that these three points
+correspond to different functions F all
+three of which are actually pretty bad
+for predicting housing prices in this
+case
+now the bottom of the bow where the cost
+function J is at a minimum is this point
+right here at the center of this
+concentric ovals
+if you haven't seen console plus much
+before I'd like you to imagine if you
+will that you are flying high up above
+the bow in an airplane or in a rocket
+ship and you're looking straight down at
+it so that is as if you set your
+computer monitor flat on your desk
+facing up
+and the bow shape is coming directly out
+of your screen Rising above your desk
+imagine that the bow shape grows out of
+your computer screen lying flat like
+that
+so that each of these ovals have the
+same height above your screen and the
+minimum of the bow is right down there
+in the center of the smallest oval
+so it turns out that the Contour plots
+are a convenient way to visualize the 3D
+cost function J but in a way that's
+plotted in just 2D
+in this video you saw how the 3D bow
+shaped surface plot can also be
+visualized as a contour font using this
+visualization tube in the next video
+Let's visualize some specific choices of
+wmb in a linear version model so you can
+see how these different choices affect
+the straight line you're fitting to the
+data let's go on to the next video
